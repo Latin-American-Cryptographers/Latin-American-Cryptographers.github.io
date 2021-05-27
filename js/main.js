@@ -54,7 +54,7 @@ docReady(() => {
         });
         topParagraphs[index].trigger = true;
       }
-    }
+      }
   }
 
   // Add the scrolling event.
@@ -68,4 +68,5 @@ docReady(() => {
     }
   });
 
+  textFit(document.getElementsByClassName('article-box'), {widthOnly: true});
 })
