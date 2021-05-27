@@ -39,7 +39,7 @@ var load_authors = function() {
       },
       {
         name: "Sofía Celi",
-        job: "Cryptography researcher",
+        job: "Cryptography Researcher",
         location: "Lisbon, Portugal",
         image: "./images/authors/sofia_celi_photo.png",
         twitter: "@claucece",
@@ -69,7 +69,7 @@ var load_authors = function() {
       },
       {
         name: "Patrick Longa",
-        job: "Cryptography researcher",
+        job: "Cryptography Researcher",
         location: "Redmond, USA",
         image: "./images/authors/patrick_longa_photo.png",
         twitter: "@PatrickLonga",
