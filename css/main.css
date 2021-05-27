@@ -113,6 +113,10 @@ footer {
   margin: 5vh;
 }
 
+.banner > a {
+  flex: 1;
+}
+
 /* Extra small devices (phones, 700px and down) */
 @media only screen and (min-width: 200px) and (max-width: 767px)  {
   .banner {
@@ -153,13 +157,14 @@ footer {
 
 /* styling of the class corresponding to the navigation menu: this toggle is hidden */
 .nav-toggle {
-  position: fixed;
-  height: 1px;
-  width: 1px;
-  overflow: hidden; /* hiding the element */
+  display: none;
+  /* position: fixed; */
+  /* height: 1px; */
+  /* width: 1px; */
+  /*overflow: hidden; /* hiding the element */
 
-  clip: rect(1px, 1px, 1px, 1px); /* creates a rectangle to clip the absolute element */
-  white-space: nowrap; /* how whitespace is handled: it collapses into a single one */
+  /*clip: rect(1px, 1px, 1px, 1px); /* creates a rectangle to clip the absolute element */
+  /*white-space: nowrap; /* how whitespace is handled: it collapses into a single one */
 }
 
 /* styling of the id corresponding to the navigation menu label */
@@ -191,7 +196,7 @@ footer {
   #nav-toggle-label {
     position: relative;
     top: 0; /* position relative to the top */
-    left: 5rem;
+    left: 0;
     right: auto; /* position relative to the right */
     margin-left: 1rem;
   }
