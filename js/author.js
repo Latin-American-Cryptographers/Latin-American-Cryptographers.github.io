@@ -77,7 +77,7 @@ var load_authors = function() {
       },
       {
         name: "Octavio Perez",
-        job: "Professor",
+        job: "PhD Student",
         location: "Montevideo, Uruguay",
         image: "./images/authors/octavio_perez_photo.png",
         twitter: "@octaviopk",
