@@ -21,7 +21,7 @@ var load_authors = function() {
         image: "./images/authors/diego_aranha_photo.png",
         twitter: "@dfaranha",
         website: "https://sites.google.com/site/dfaranha/",
-        research: "Elliptic Curve Cryptography & Efficient And Secure Cryptography in Software"
+        research: "Elliptic-Curve Cryptography & Efficient And Secure Cryptography in Software"
       },
       {
         name: "Gustavo Banegas",
@@ -48,7 +48,7 @@ var load_authors = function() {
         image: "./images/authors/sofia_celi_photo.png",
         twitter: "@claucece",
         website: "https://www.sofiaceli.com/",
-        research: "Elliptic Curve Cryptography, Secure Messaging & Deniability"
+        research: "Post-Quantum Cryptography, Secure Messaging & Deniability"
       },
       {
         name: "Jesús Chi",
@@ -90,13 +90,13 @@ var load_authors = function() {
         name: "Octavio Perez Kempner",
         job: "PhD Student",
         location: "Clermont-Ferrand, France",
-        image: "./images/authors/octavio_perez-kempner_photo.png",
+        image: "./images/authors/octavio_perez_photo.png",
         twitter: "@octaviopk",
         website: "https://securite.di.ens.fr/",
         research: "Provable security, Public-key Crpytography & Zero-knowledge Proofs"
       },
       {
-        name: "Francisco Rodríguez Henríquez",
+        name: "Francisco Rodríguez",
         job: "Professor",
         location: "Ciudad de México, México",
         image: "./images/authors/francisco_rodriguez_photo.png",
