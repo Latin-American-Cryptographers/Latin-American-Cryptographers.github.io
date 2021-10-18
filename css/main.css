@@ -1323,3 +1323,22 @@ section.report .small-image {
    display: block;
    overflow: auto;
 }
+
+.opportunity-text {
+  font-size: calc(var(--main-font-size) / 4); /* using em for font sizes as defined in https://gist.github.com/basham/2175a16ab7c60ce8e001 */
+}
+
+/* styling of the 'article-text' a tag: the links in the article */
+.opportunity-text a {
+  color: var(--off-dark-purple);
+}
+
+/* styling of the 'article-text' a:hover tag: the hover over links in the article */
+.opportunity-text a:hover {
+  color: var(--off-light-purple);
+}
+
+/* For accessibility purposes. See: https://css-tricks.com/focusing-on-focus-styles/ */
+.opportunity-text a:focus {
+  outline: 3px solid var(--off-dark-purple);
+}
