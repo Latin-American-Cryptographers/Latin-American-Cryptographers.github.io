@@ -41,10 +41,10 @@ layout: default
   <!-- this section includes the most recent articles. -->
   <div id="articles-nav">
     <div id="main-articles-list">
-      {% for post in site.posts %}
+      {% for post in site.posts limit:3 %}
       <a class="article-link" href="{{post.url}}">
         <div class="article-box">
-          <div><img src="{{post.image}}" alt="lol.html"></div>
+          <div><img src="{{post.image}}" alt="article image"></div>
           <div class="article-title-out">{{post.title}}</div>
           <div class="article-author-out">{{post.author}}</div>
           <div class="article-date-out">{{ post.date | date: '%B %d, %Y' }}</div>

@@ -622,9 +622,7 @@ section#articles {
 }
 
 .article-box img {
-  width: 60%;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  width: 90%;
   opacity: 100%;
   filter: "";
 }
