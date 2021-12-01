@@ -9,7 +9,7 @@ var load_authors = function() {
         name: "Abdelrahaman Aly",
         job: "Senior Cryptographer",
         location: "Abu Dhabi, UAE",
-        image: "./images/authors/abdelraham_aly_photo.png",
+        image: "../images/authors/abdelraham_aly_photo.png",
         twitter: "@abdito_8",
         website: "https://scholar.google.es/citations?user=FDfDueMAAAAJ&hl=en",
         research: "Multiparty Computation, Algorithm Design & Applied Cryptography"
@@ -18,7 +18,7 @@ var load_authors = function() {
         name: "Diego Aranha",
         job: "Associate Professor",
         location: "Aarhus, Denmark",
-        image: "./images/authors/diego_aranha_photo.png",
+        image: "../images/authors/diego_aranha_photo.png",
         twitter: "@dfaranha",
         website: "https://sites.google.com/site/dfaranha/",
         research: "Elliptic-Curve Cryptography & Efficient And Secure Cryptography in Software"
@@ -27,7 +27,7 @@ var load_authors = function() {
         name: "Gustavo Banegas",
         job: "Post-Doc",
         location: "Paris, France",
-        image: "./images/authors/gustavo_banegas_photo.png",
+        image: "../images/authors/gustavo_banegas_photo.png",
         twitter: "@gustavosbanegas",
         website: "https://www.cryptme.in/",
         research: "Quantum Cryptanalysis, Isogeny-based Cryptography & Post-quantum Cryptography"
@@ -36,7 +36,7 @@ var load_authors = function() {
         name: "Fabio Campos",
         job: "PhD Student",
         location: "Bochum, Germany",
-        image: "./images/authors/fabio_campos_photo.png",
+        image: "../images/authors/fabio_campos_photo.png",
         twitter: "@primaboinca",
         website: "https://www.sopmac.de/",
         research: "Post-quantum Cryptography"
@@ -45,7 +45,7 @@ var load_authors = function() {
         name: "Sofía Celi",
         job: "Cryptography Researcher",
         location: "Lisbon, Portugal",
-        image: "./images/authors/sofia_celi_photo.png",
+        image: "../images/authors/sofia_celi_photo.png",
         twitter: "@claucece",
         website: "https://www.sofiaceli.com/",
         research: "Post-Quantum Cryptography, Secure Messaging & Deniability"
@@ -54,7 +54,7 @@ var load_authors = function() {
         name: "Jesús Chi",
         job: "Senior Cryptographer",
         location: "Abu Dhabi, UAE",
-        image: "./images/authors/jesus_chi_photo.png",
+        image: "../images/authors/jesus_chi_photo.png",
         twitter: "@Jebus_dguez",
         website: "https://jjchidguez.github.io/",
         research: "Cryptanalysis & Isogeny-based Cryptography"
@@ -63,7 +63,7 @@ var load_authors = function() {
         name: "Daniel Escudero",
         job: "Cryptography Researcher",
         location: "Aarhus, Denmark",
-        image: "./images/authors/daniel_escudero_photo.png",
+        image: "../images/authors/daniel_escudero_photo.png",
         twitter: "@deescuderoo",
         website: "https://deescuderoo.github.io/",
         research: "Multivariate Cryptography, Multiparty Computation & Private Machine Learning"
@@ -72,7 +72,7 @@ var load_authors = function() {
         name: "Armando Faz",
         job: "Cryptography Engineer",
         location: "California, USA",
-        image: "./images/authors/armando_faz_photo.png",
+        image: "../images/authors/armando_faz_photo.png",
         twitter: "@armfazh",
         website: "https://scholar.google.com/citations?user=XGD6X-EAAAAJ&hl=en",
         research: "Cryptographic Engineering, Elliptic Curve Cryptography & High-Performance Computing"
@@ -81,7 +81,7 @@ var load_authors = function() {
         name: "Patrick Longa",
         job: "Cryptography Researcher",
         location: "Redmond, USA",
-        image: "./images/authors/patrick_longa_photo.png",
+        image: "../images/authors/patrick_longa_photo.png",
         twitter: "@PatrickLonga",
         website: "https://www.patricklonga.com/",
         research: "Post-quantum Cryptography, Algorithm Design & High-Performance Computing"
@@ -90,7 +90,7 @@ var load_authors = function() {
         name: "Octavio Perez Kempner",
         job: "PhD Student",
         location: "Clermont-Ferrand, France",
-        image: "./images/authors/octavio_perez_photo.png",
+        image: "../images/authors/octavio_perez_photo.png",
         twitter: "@octaviopk",
         website: "https://securite.di.ens.fr/",
         research: "Provable security, Public-key Crpytography & Zero-knowledge Proofs"
@@ -99,7 +99,7 @@ var load_authors = function() {
         name: "Francisco Rodríguez",
         job: "Professor",
         location: "Ciudad de México, México",
-        image: "./images/authors/francisco_rodriguez_photo.png",
+        image: "../images/authors/francisco_rodriguez_photo.png",
         twitter: "@FRHENR",
         website: "https://delta.cs.cinvestav.mx/~francisco/",
         research: "Public-key Crpytography & Computer Arithmetic"
@@ -108,7 +108,7 @@ var load_authors = function() {
         name: "Fernando Virdia",
         job: "Post-Doc",
         location: "Zurich, Switzerland",
-        image: "./images/authors/fernando_virdia_photo.png",
+        image: "../images/authors/fernando_virdia_photo.png",
         twitter: "",
         website: "https://fundamental.domains/",
         research: "Post-quantum Cryptography & Cryptanalysis"
@@ -117,7 +117,7 @@ var load_authors = function() {
         name: "Arantxa Zapico",
         job: "PhD Candidate",
         location: "Barcelona, Spain",
-        image: "./images/authors/arantxa_zapico_photo.png",
+        image: "../images/authors/arantxa_zapico_photo.png",
         twitter: "@arantxazapico",
         website: "https://www.linkedin.com/in/victoria-arantxa-zapico-634444160/?originalSubdomain=es",
         research: "Public-key Crpytography & Zero-knowledge Proofs"
