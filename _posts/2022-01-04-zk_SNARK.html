@@ -1,30 +1,49 @@
 ---
 layout: post
-title: "Zero-Knowledge SNARKs"
+title: "zk-SNARKs"
 author: "Arantxa Zapico"
 date: "04/01/2022"
 image: "../images/articles/2022_01_04_zk_SNARK_image.jpg"
 ---
 <!-- the article information: title, author and date. -->
 <div class="article-information">
-    <h1 class="article-title">Zero-Knowledge SNARKs</h1>
+    <h1 class="article-title">zk-SNARKs</h1>
     <h2>Arantxa Zapico</h2>
     <h2>04/01/2022</h2>
 </div>
 
 <div class="article-intro">
-    <p>Zero-Knowledge SNARKs</p>
+    <p>zk-SNARKs</p>
+    <span>
+        <input type="button" onclick="show_english()" value="Display English version"/>
+        <input type="button" onclick="show_spanish()" value="Mostrar version en Espa&#xF1;ol"/>
+    </span>
 </div>
+
+<script>
+    function show_english() {
+        document.getElementById("article-text-english").style.display ="block";
+        document.getElementById("article-text-spanish").style.display = "none";
+    }
+</script>
+
+<script>
+    function show_spanish() {
+        document.getElementById("article-text-spanish").style.display = "block";
+        document.getElementById("article-text-english").style.display ="none";
+    }
+</script>
+
 <!-- the content of the article itself. -->
-<div class="article-text">
+<div class="article-text"id="article-text-english">
 
-    <p>zk-SNARK stands for <strong>Z</strong>ero-<strong>K</strong>nowledge <strong>S</strong>uccinct <strong>N</strong>on-interactive <strong>AR</strong>gument of <strong>K</strong>nowledge.</p>
+    <p><u><strong>zk-SNARK</strong></u> stands for <strong>Z</strong>ero-<strong>K</strong>nowledge <strong>S</strong>uccinct <strong>N</strong>on-interactive <strong>AR</strong>gument of <strong>K</strong>nowledge.</p>
 
-    <p>An <i>argument</i> or <i>proof</i> (they are not the same, but we can ignore their differences in this post) is a protocol where two parties, the prover, and the verifier, interact, and the former tries to convince the latter of some statement.</p>
+    <p>An <i>argument</i> or <i>proof</i> (they are not the same, but we can ignore their differences in this post) is a protocol where two parties, the <i>prover</i>, and the <i>verifier</i>, interact, and the former tries to convince the latter of some statement.</p>
 
     <p>For instance, our mobile phone asks a powerful server to perform some expensive computation that it cannot compute itself; the server sends back the result, along with a proof that the output is indeed the result of the required computation.
         Namely, the server wants to convince our phone that the result is correct.
-        An <i>argument of knowledge</i> goes a bit further. The prover aims to convince the verifier that it knows something.
+        An <i>argument of knowledge</i> goes a bit further. The <i><i>probador</i></i> aims to convince the <i>verifier</i> that it knows something.
     </p>
     <p>Let's say we have paid some money to this server (<u>server A</u>) to compute something for us, and we want to make sure that it did not ask some other server to perform this calculation (in that case, we would prefer to interact with the second server and get a better price).
         In this case, we can ask <u>server A</u> for a <i>proof of knowledge</i> of all the intermediate steps that made it arrive at the solution.
@@ -34,10 +53,10 @@ image: "../images/articles/2022_01_04_zk_SNARK_image.jpg"
     <p>Now, why <i>succinct</i>? Well, this is an easy one. We want to check with a phone some computation that the very powerful <u>server A</u> has performed.
         This checking must be cheaper to run than the computation itself. Not only cheaper but, let's say, way cheaper.
         Because otherwise, why pay for something we can calculate ourselves with just a bit of effort? What is more, the <i>proof</i> has to be small, otherwise it could be the case that our phone cannot even receive it.
-        Also, we want to reduce the interaction between the prover and the verifier as much as possible.
+        Also, we want to reduce the interaction between the <i>prover</i> and the <i>verifier</i> as much as possible.
         Why? Because having to send information back and forward would imply that both devices need to be in constant communication, so neither of them can be turned off or even offline. The ideal amount of interaction is then no interaction.
-        The verifier makes a request, which in general is public and then does not imply communication, the prover runs its calculations and sends the result plus the <i>proof</i>.
-        The verifier checks it on its own and we are done. That is where the non-interactive part comes from.
+        The <i>verifier</i> makes a request, which in general is public and then does not imply communication, the <i>prover</i> runs its calculations and sends the result plus the <i>proof</i>.
+        The <i>verifier</i> checks it on its own and we are done. That is where the non-interactive part comes from.
     </p>
     <p>To explain <strong>zero-knowledge</strong> we will migrate examples and talk about the very exciting field of cryptocurrencies.
         This time we are <u>user A</u> and want to transfer some of our crypto coins to <u>user B</u>.
@@ -46,26 +65,83 @@ image: "../images/articles/2022_01_04_zk_SNARK_image.jpg"
         You can think of it as a public book that everyone can read, where everyone can publish but the pages (and everything written on them) are added by users (the miners) that pass some selection process (and receive very nice rewards).
         So, users send their transactions to the miners, the miners add them to their pages and then try to add these pages to the book. Once the page containing our transaction is in the book (actually, it has been in the book for some time), the transaction is considered done.
     </p>
-    <p>How can we pay? To transfer to <u>user B</u> we need to prove something like <i>“I am a <u>user A</u>, owner of account A and want to transfer X crypto coins to <u>user B</u>”</i>.
-        Noisy, right? Cryptocurrencies are meant to be as private as possible and then we would like the blockchain (which is public and available to everyone) to contain only something like “I am a user that holds some account that has enough money to send to another user what I want to send, and I do so”.
-        Way better, right? That is what <strong>zero-knowledge</strong> is for: the verifier only learns what it must learn, so we can prove the first statement but we do not leak more than what the second statement says.
-        Proving ownership of an account can be done by proving knowledge of the password (or secret key) that corresponds to such an account.
+    <p>How can we pay? To transfer to <u>user B</u> we need to prove something like <i>&quot;I am a <u>user A</u>, owner of account A and want to transfer X crypto coins to <u>user B</u>&quot;</i>.
+        Noisy, right? Cryptocurrencies are meant to be as private as possible and then we would like the blockchain (which is public and available to everyone) to contain only something like <i>&quot;I am a user that holds some account that has enough money to send to another user what I want to send, and I do so&quot;</i>.
+        Way better, right? That is what <strong>zero-knowledge</strong> is for: the <i>verifier</i> only learns what it must learn, so we can prove the first statement but we do not leak more than what the second statement says.
+    </p>
+    <p>Proving ownership of an account can be done by proving knowledge of the password (or secret key) that corresponds to such an account.
         This is something very similar to what we do with ATMs, but in this case, as we are doing everything in the Blockchain and cannot hide with our bodies and hands what is published there, we better just publish a <strong>zero-knowledge</strong> <i>argument of knowledge</i>.
     </p>
-    <p>Who are the verifiers in this setting? Anyone could be, but in particular, the miners always verify a transaction before publishing it.
+    <p>Who are the <i>verifier</i>s in this setting? Anyone could be, but in particular, the miners always verify a transaction before publishing it.
         Now, miners own very powerful machines so, what is <i>succinctness</i> for? Well, the fact is that publishing in a Blockchain has its cost, and also miners have to verify thousands of transactions, so we want to keep it short and fast for them.
     </p>
 
-    <p>Succinctness or <strong>zero-knowledge</strong> are not exclusive properties to zk-SNARKs but, as you can imagine from the description, both find very nice applications in real world.
-        Importantly, there are different trade-offs we can chose in terms of efficiency, security, communication costs for <i>proof</i> systems and, even though zk-SNARKs sound ideal as described in this post, they are designed to maximize efficiency and pay costs in other aspects, as security.
+    <p>Succinctness or <strong>zero-knowledge</strong> are not exclusive properties to <u><strong>zk-SNARKs</strong></u> but, as you can imagine from the description, both find very nice applications in real world.
+        Importantly, there are different trade-offs we can chose in terms of efficiency, security, communication costs for <i>proof</i> systems and, even though <u><strong>zk-SNARKs</strong></u> sound ideal as described in this post, they are designed to maximize efficiency and pay costs in other aspects, as security.
         <!--<sup><a href="#foot1">[1]</a></sup>.-->
     </p>
 
-    <p>If you want to know more about this, stay tuned for future posts!!</p>
+    <p>If you want to know more about this, stay tuned for future posts!</p>
 
 <!--    <div class="article-footnotes">-->
 <!--        <p id="fig1">* Figure taken from https://academy.bit2me.com/en/what-are-zk-snark-tests </p>-->
 <!--        &lt;!&ndash;<p id="foot2">[3] </p>&ndash;&gt;-->
 <!--    </div>-->
+
+</div>
+
+<div class="article-text" style="display:none" id="article-text-spanish">
+
+    <p><u><strong>zk-SNARK</strong></u> son las siglas en ingl&eacute;s de <strong>Z</strong>ero-<strong>K</strong>nowledge <strong>S</strong>uccinct <strong>N</strong>on-interactive <strong>AR</strong>gument of <strong>K</strong>nowledge, que ser&iacute;a algo as&iacute; como Argumentos de Conocimiento, No interactivos, Succintos y con Cero conocimiento. Muy confuso, ¿no? Vamos poco a poco.</p>
+
+    <p>Un <i>argumento</i>, o una <i>prueba</i>, (en realidad no son lo mismo pero por hoy podemos asumir que si) es un protocolo donde dos partes, un <i>probador</i> y un <i>verificador</i> interactuan, y en el cu&aacute;l el primero intenta convencer al segundo de alguna sentencia. Por ejemplo,</p>
+
+    <p>Nuestro celular le pide a un servidor grande que haga un c&aacute;lculo muy costoso que no puede realizar &eacute;l mismo. El servidor responde con el resultado y una prueba de que este ha sido computado correctamente (esta ser&iacute;a la sentencia a probar).
+        Es decir, el servidor quiere convencer a nuestro celular de que el resultado es el correcto.
+        Un <i>argumento de conocimiento</i> va un poco m&aacute;s lejos. El <i>probador</i> quiere convencer al verificador de que sabe algo
+    </p>
+    <p>Digamos que hemos pagado al servidor (<u>servidor A</u>) para hacer un c&aacute;lculo y nos queremos asegurar no s&oacute;lo de que el c&aacute;lculo es correcto si no tambi&eacute;n de que el <u>servidor A</u> lo ha hecho &eacute;l mismo y no ha pedido ayuda a otro servidor (en ese caso, preferir&iacute;amos hablar con el segundo servidor y conseguir un mejor precio).
+        Para evitar esa situaci&oacute;n, podemos pedir al <u>servidor A</u> que nos provea con una <i>prueba de conocimiento</i> de todos los pasos intermedios que hizo para llegar a la soluci&oacute;n.
+        Naturalmente, no vamos a chequear uno por uno cada uno de estos pasos, pues s&oacute;lo contamos con un tel&eacute;fono m&oacute;bil y lo m&aacute;s probable es que no podamos siquiera intentarlo.
+        Pero nos queremos asegurar que <u>servidor A</u> conoce esos pasos, por lo tanto, necesitamos una <i>prueba de conocimiento</i> de ellos.
+    </p>
+    <p>Ahora, ¿Sucinto? Sucinto significa &quot;que est&aacute; expresado de manera breve, concisa y precisa&quot;.
+        Es decir, que tiene que ser corto, eficiente. ¿Por qu&eacute;? Bueno, eso es f&aacute;cil: queremos chequear con un tel&eacute;fono m&oacute;bil un c&aacute;lculo que ha realizado <u>servidor A</u>, el cu&aacute;l posee un poder computacional mucho mayor.
+        Este paso de verificaci&oacute;n tiene que ser m&aacute;s r&aacute;pido de correr que el c&aacute;lculo en s&iacute;. De hecho, no basta con m&aacute;s r&aacute;pido, si no que debe ser much&iacute;simo m&aacute;s r&aacute;pido.
+        Si no es as&iacute;, ¿Por qu&eacute; pagar&iacute;amos por algo que podemos calcular por nuestros medios? Y adem&aacute;s la <i>prueba</i> en s&iacute; debe ser chica, de otra manera nuesto dispositivo no podr&aacute; ni recibirla.
+        Por otro lado, nos gustar&iacute;a reducir la interacci&oacute;n entre el <i>probador</i> y el <i>verificador</i> lo m&aacute;ximo posible.
+        ¿Por qu&eacute;? Porque tener que enviar mensajes de un lado al otro implica que los dos dispositivos, celular y servidor, tienen que estar en constante comunicaci&oacute;n, por lo que ninguno se puede apagar o siquiera desconectar.
+        La cantidad ideal de interacci&oacute;n es lo que llamamos no interacci&oacute;n: el <i>verificador</i> pide un c&aacute;lculo, paso que en general no se realiza ya que la sentencia a probar es p&uacute;blica, el <i>probador</i> lleva a cabo el c&aacute;lculo y env&iacute;a el resultado + la <i>prueba</i>.
+        Finalmente, el <i>verificador</i> chequea el resultado y la prueba para s&iacute; mismo y fin. De aqu&iacute; viene lo no interactivo del <i>argumento</i>.
+    </p>
+    <p>Para explicar el <strong>cero conocimiento</strong> vamos a cambiar el ejemplo y hablar un poquito de las tan famosas criptomonedas.
+        Imaginemos que somos <u>usuaria A</u> y queremos transferir algunas de nuestras criptomonedas al <u>usuario B</u>. Como sabŕan, o quiz&aacute;s no, estas transacciones se publican en el blockchian correspondiente a nuestra criptomoneda, que es p&uacute;blico y accesible para todo el mundo.
+        Adem&aacute;s, no hay una autoridad central que mantenga este blockchain, si no que es mantenido por l@s miner@s, usuari@s elegidos casi aleatoriamente para crear bloques que incluyan las transacciones.
+        Podemos por ejemplo, pensar el blockchain como un libro p&uacute;blico, que todas las personas pueden leer y en el cu&aacute;l todas las personas pueden publicar. Sin embargo, lo que querramos publicar debe ser inclu&iacute;do en p&aacute;ginas que son agregadas al libro por l@s miner@s, que pasan cierto proceso de selecci&oacute;n y reciben recompensas por cada p&aacute;gina que agregan.
+        Recapitulando, yo usuaria env&iacute;o mi transacci&oacute;n a l@s miner@s, &eacute;stos las agregan a una p&aacute;gina y luego intentan incluir esa p&aacute;gina en el libro.
+        Una vez que la p&aacute;gina que contiene nuestra transacci&oacute;n es publicada (en realidad, una vez que ha permanecido en el libro por cierto tiempo) la transacci&oacute;n se considera realizada.
+    </p>
+    <p>¿C&oacute;mo pagamos? Para transferir al <u>usuario B</u> necesitamos probar algo as&iacute; como <i>&quot;Yo soy la <u>usuaria A</u>, due&#xF1;a de la cuenta A y quiero transferirle X criptomonedas al <u>usuario B</u>&quot;</i>.
+        ¿Raro, no? Las criptomonedas se construyen para ser tan privadas como sea posible, y por lo tanto nos gustar&iacute;a publicar en el blockchain (que, recordemos, es p&uacute;blico y est&aacute; disponible para cualquier persona) algo como <i>&quot;Yo soy una usuaria due&#xF1;a de una cuenta, en la cual hay suficiente dinero para enviarle a B lo que quiero enviarle, y le env&iacute;o&quot;</i>.
+        Mejor, ¿No?.
+        Esa es exactamente la tarea del <strong>cero conocimiento</strong>: el <i>verificador</i> solo puede saber lo estrictamente necesario, es decir, podemos probar algo como la primera sentencia, pero sin filtrar m&aacute;s informaci&oacute;n que la contenida en la segunda.
+    </p>
+    <p>Probar, por ejemplo, posesi&oacute;n de una cuenta puede hacerse probando conocimiento de la contrase&#xF1;a (o de la clave secreta) que corresponde a dicha cuenta.
+        Esto es b&aacute;sicamente lo que hacemos cuando usamos cajeros autom&aacute;ticos, solo que en este caso como no podemos cubrir con nuestros cuerpos o manos lo que publicamos en el blockchain, lo que hacemos es publicar, en lugar de nuestra contrase&#xF1;a, una <i>prueba de conocimiento</i> con <strong>cero conocimiento</strong>, valga la redundancia.
+    </p>
+    <p>¿Qui&eacute;nes verifican en este caso? Bueno, en principio cualquier persona que lo desee pero, en particular, l@s miner@s deben verificar todas las transacciones antes de publicarlas.
+        Ahora, l@s miner@s poseen m&aacute;quinas con mucho poder computacional, ¿para qu&eacute; mantener las pruebas sucintas? El caso es que publicar en el blockchain tiene un costo y adem&aacute;s, l@s miner@s deben verificar miles de transacciones, por lo que queremos mantenerlas peque&#xF1;as y r&aacute;pidas de verificar.
+    </p>
+
+    <p>Un detalle importante es que tanto el ser sucintos como el <strong>cero conocimiento</strong> no son propiedades exclusivas de los <u><strong>zk-SNARKs</strong></u>, si no que como podr&aacute;n imaginarse, ambas propiedades son altamente requeridas en distintos protocolos. M&aacute;s a&uacute;n, hay muchos protocolos que nos ofrecen distintos niveles de eficiencia, seguridad y comunicaci&oacute;n pero ninguno, ni los <u><strong>zk-SNARKs</strong></u>, est&aacute;n siquiera cerca de ser ideales en todos los aspectos. Éstos &uacute;ltimos est&aacute;n dise&#xF1;ados para maximizar la eficiencia, pero a costa de otros aspectos, como la seguridad.
+        <!--<sup><a href="#foot1">[1]</a></sup>.-->
+    </p>
+
+    <p>Si te interesa saber m&aacute;s de este tema, h&aacute;znoslo saber y mantente atento(a) a pr&oacute;ximas publicaciones!</p>
+
+    <!--    <div class="article-footnotes">-->
+    <!--        <p id="fig1">* Figure taken from https://academy.bit2me.com/en/what-are-zk-snark-tests </p>-->
+    <!--        &lt;!&ndash;<p id="foot2">[3] </p>&ndash;&gt;-->
+    <!--    </div>-->
 
 </div>
