@@ -1,0 +1,71 @@
+---
+layout: post
+title: "Zero-Knowledge SNARKs"
+author: "Arantxa Zapico"
+date: "04/01/2022"
+image: "../images/articles/2022_01_04_zk_SNARK_image.jpg"
+---
+<!-- the article information: title, author and date. -->
+<div class="article-information">
+    <h1 class="article-title">Zero-Knowledge SNARKs</h1>
+    <h2>Arantxa Zapico</h2>
+    <h2>04/01/2022</h2>
+</div>
+
+<div class="article-intro">
+    <p>Zero-Knowledge SNARKs</p>
+</div>
+<!-- the content of the article itself. -->
+<div class="article-text">
+
+    <p>zk-SNARK stands for <strong>Z</strong>ero-<strong>K</strong>nowledge <strong>S</strong>uccinct <strong>N</strong>on-interactive <strong>AR</strong>gument of <strong>K</strong>nowledge.</p>
+
+    <p>An <i>argument</i> or <i>proof</i> (they are not the same, but we can ignore their differences in this post) is a protocol where two parties, the prover, and the verifier, interact, and the former tries to convince the latter of some statement.</p>
+
+    <p>For instance, our mobile phone asks a powerful server to perform some expensive computation that it cannot compute itself; the server sends back the result, along with a proof that the output is indeed the result of the required computation.
+        Namely, the server wants to convince our phone that the result is correct.
+        An <i>argument of knowledge</i> goes a bit further. The prover aims to convince the verifier that it knows something.
+    </p>
+    <p>Let's say we have paid some money to this server (<u>server A</u>) to compute something for us, and we want to make sure that it did not ask some other server to perform this calculation (in that case, we would prefer to interact with the second server and get a better price).
+        In this case, we can ask <u>server A</u> for a <i>proof of knowledge</i> of all the intermediate steps that made it arrive at the solution.
+        Of course, we are not going to check them all! I mean, we have a phone and probably can’t even try.
+        But we want to make sure <u>server A</u> knows them. Then, we need an <i>argument of knowledge</i>.
+    </p>
+    <p>Now, why <i>succinct</i>? Well, this is an easy one. We want to check with a phone some computation that the very powerful <u>server A</u> has performed.
+        This checking must be cheaper to run than the computation itself. Not only cheaper but, let's say, way cheaper.
+        Because otherwise, why pay for something we can calculate ourselves with just a bit of effort? What is more, the <i>proof</i> has to be small, otherwise it could be the case that our phone cannot even receive it.
+        Also, we want to reduce the interaction between the prover and the verifier as much as possible.
+        Why? Because having to send information back and forward would imply that both devices need to be in constant communication, so neither of them can be turned off or even offline. The ideal amount of interaction is then no interaction.
+        The verifier makes a request, which in general is public and then does not imply communication, the prover runs its calculations and sends the result plus the <i>proof</i>.
+        The verifier checks it on its own and we are done. That is where the non-interactive part comes from.
+    </p>
+    <p>To explain <strong>zero-knowledge</strong> we will migrate examples and talk about the very exciting field of cryptocurrencies.
+        This time we are <u>user A</u> and want to transfer some of our crypto coins to <u>user B</u>.
+        As you may, or may not, know, this transaction has to be published in the corresponding blockchain, which is public and accessible to all.
+        Also, there is no central authority that maintains it, but only miners that are somewhat aleatory selected to create blocks that include transactions.
+        You can think of it as a public book that everyone can read, where everyone can publish but the pages (and everything written on them) are added by users (the miners) that pass some selection process (and receive very nice rewards).
+        So, users send their transactions to the miners, the miners add them to their pages and then try to add these pages to the book. Once the page containing our transaction is in the book (actually, it has been in the book for some time), the transaction is considered done.
+    </p>
+    <p>How can we pay? To transfer to <u>user B</u> we need to prove something like <i>“I am a <u>user A</u>, owner of account A and want to transfer X crypto coins to <u>user B</u>”</i>.
+        Noisy, right? Cryptocurrencies are meant to be as private as possible and then we would like the blockchain (which is public and available to everyone) to contain only something like “I am a user that holds some account that has enough money to send to another user what I want to send, and I do so”.
+        Way better, right? That is what <strong>zero-knowledge</strong> is for: the verifier only learns what it must learn, so we can prove the first statement but we do not leak more than what the second statement says.
+        Proving ownership of an account can be done by proving knowledge of the password (or secret key) that corresponds to such an account.
+        This is something very similar to what we do with ATMs, but in this case, as we are doing everything in the Blockchain and cannot hide with our bodies and hands what is published there, we better just publish a <strong>zero-knowledge</strong> <i>argument of knowledge</i>.
+    </p>
+    <p>Who are the verifiers in this setting? Anyone could be, but in particular, the miners always verify a transaction before publishing it.
+        Now, miners own very powerful machines so, what is <i>succinctness</i> for? Well, the fact is that publishing in a Blockchain has its cost, and also miners have to verify thousands of transactions, so we want to keep it short and fast for them.
+    </p>
+
+    <p>Succinctness or <strong>zero-knowledge</strong> are not exclusive properties to zk-SNARKs but, as you can imagine from the description, both find very nice applications in real world.
+        Importantly, there are different trade-offs we can chose in terms of efficiency, security, communication costs for <i>proof</i> systems and, even though zk-SNARKs sound ideal as described in this post, they are designed to maximize efficiency and pay costs in other aspects, as security.
+        <!--<sup><a href="#foot1">[1]</a></sup>.-->
+    </p>
+
+    <p>If you want to know more about this, stay tuned for future posts!!</p>
+
+<!--    <div class="article-footnotes">-->
+<!--        <p id="fig1">* Figure taken from https://academy.bit2me.com/en/what-are-zk-snark-tests </p>-->
+<!--        &lt;!&ndash;<p id="foot2">[3] </p>&ndash;&gt;-->
+<!--    </div>-->
+
+</div>
