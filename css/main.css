@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Gacor'; /*a name to be used later*/
-    src: url('../assets/fonts/gacor.otf'); /*URL to font*/
+    src: url('../assets/fonts/gacor-webfont.woff2'); /*URL to font*/
 }
 
 /* Variables that are repeated over the styling code */
