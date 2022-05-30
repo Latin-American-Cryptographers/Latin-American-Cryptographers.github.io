@@ -22,7 +22,7 @@
   /* The font size definitions for the two fonts that are used */
   --main-font: 'Calibri', sans-serif;
   --secondary-font: 'Courier Prime', monospace;
-  --thrid-font: 'Gacor';
+  --thrid-font: 'Gacor', sans-serif;
   --main-font-size: 2em;
   --med-font-size: 1.8em;
   --small-font-size: 1.5em;
