@@ -145,13 +145,11 @@ footer {
 }
 
 #header-logo svg {
-  width: 200%;
 }
 
 /* Extra small devices (phones, 700px and down) */
 @media only screen and (min-width: 200px) and (max-width: 767px)  {
   #header-logo svg {
-    margin-top: 6vh;
     width: 100%;
   }
 }
@@ -159,7 +157,6 @@ footer {
 /* Medium devices (landscape tablets, 768px up to 1024) */
 @media only screen and (min-width: 768px) and (max-width: 1024px)  {
   #header-logo svg {
-    margin-top: 6vh;
     width: 100%;
   }
 }
