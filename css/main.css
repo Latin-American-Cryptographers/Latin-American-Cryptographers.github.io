@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
+@font-face {
+    font-family: 'Gacor'; /*a name to be used later*/
+    src: url('../assets/fonts/gacor.otf'); /*URL to font*/
+}
+
 /* Variables that are repeated over the styling code */
 :root {
   /* The color palette: white, black, gray, yellow and purple. Defined in hex */
   --off-white: #ffffd1;
   --dark-black: #000000;
   --light-gray: #d3d3d3;
-  --off-yellow: #f2ee83;
-  --off-dark-purple: #6438A6;
+  --off-yellow: #ff593c;
+  --off-dark-purple: #23859c;
   --off-light-purple: #8f9df2;
 
   /* The color palette with opacity: white and gray. Defined in hex */
@@ -15,8 +20,9 @@
   --opaque-off-light-gray: #d3d3d31f;
 
   /* The font size definitions for the two fonts that are used */
-  --main-font: 'Helvetica', sans-serif;
+  --main-font: 'Calibri', sans-serif;
   --secondary-font: 'Courier Prime', monospace;
+  --thrid-font: 'Gacor';
   --main-font-size: 2em;
   --med-font-size: 1.8em;
   --small-font-size: 1.5em;
@@ -111,7 +117,7 @@ footer {
 
   position: relative; /* positioned relative to its normal position */
   border-bottom: 1px solid var(--light-gray);
-  margin: 5vh;
+  background-color: black;
 }
 
 /* Extra small devices (phones, 700px and down) */
@@ -135,20 +141,26 @@ footer {
   top: calc(var(--space) * 2);
   left: calc(var(--space) * 2);
 
-  font-size: var(--main-font-size);
+  margin-left: 3vh;
+}
+
+#header-logo svg {
+  width: 200%;
 }
 
 /* Extra small devices (phones, 700px and down) */
 @media only screen and (min-width: 200px) and (max-width: 767px)  {
-  #header-logo p {
-    font-size: var(--reponsive-small-font-size);
+  #header-logo svg {
+    margin-top: 6vh;
+    width: 100%;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
 @media only screen and (min-width: 768px) and (max-width: 1024px)  {
-  #header-logo p {
-    font-size: var(--reponsive-med-font-size);
+  #header-logo svg {
+    margin-top: 6vh;
+    width: 100%;
   }
 }
 
@@ -368,6 +380,7 @@ section.content {
 
 /* styling of the 'animated-element' class for adding a 'fadeInDown' gallery-animation. It takes inspiration from https://github.com/animate-css/animate.css/blob/main/source/fading_entrances/fadeInDown.css*/
 .scroll-element {
+  font-family: var(--thrid-font);
   animation-duration: var(--animate-duration);
   animation-fill-mode: both;
 }
@@ -398,7 +411,7 @@ section.content {
 
   padding: 0 calc(var(--space) * 2);
 
-  font-size: calc(var(--main-font-size) * 1.2);
+  font-size: calc(var(--main-font-size) / 1.2);
   font-weight: 500; /* apply a bolder font weight */
   line-height: calc(var(--line-height) / 1.5);
 }
@@ -419,6 +432,29 @@ section.content {
     margin-top: 7rem;
     font-size: calc(var(--small-font-size) * 1.2);
   }
+}
+
+#welcome-text {
+  font-size: calc(var(--main-font-size) / 2);
+  font-family: var(--thrid-font);
+}
+
+/* Extra small devices (phones, 700px and down) */
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+  #welcome-text {
+    font-size: calc(var(--main-font-size) / 2.5);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px up to 1024) */
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+  #welcome-text {
+    font-size: calc(var(--main-font-size) / 2.5);
+  }
+}
+
+.intro-text {
+  font-family: var(--thrid-font);
 }
 
 /* styling of the nav-toggle class: the input that shows the menu when checked */
@@ -635,7 +671,7 @@ section#articles {
 
 .article-title-out {
   font-size: 2rem;
-  font-family: 'Courier Prime', monospace;
+  font-family: var(--secondary-font);
   text-align: center;
   border-top: 0.3rem solid #000000;
 }
@@ -649,13 +685,13 @@ section#articles {
 
 .article-author-out {
   font-size: 1rem;
-  font-family: 'Courier Prime', monospace;
+  font-family: var(--secondary-font);
   text-align: right;
 }
 
 .article-date-out {
   font-size: 0.8rem;
-  font-family: 'Courier Prime', monospace;
+  font-family: var(--secondary-font);
   text-align: right;
 }
 /*
@@ -701,7 +737,8 @@ section.article-content {
 
 /* styling of the 'article-information' class */
 .article-title {
-  font-size: calc(var(--main-font-size) * 1.5);
+  font-family: var(--thrid-font);
+  font-size: calc(var(--main-font-size));
   margin: 0;
 }
 
@@ -709,7 +746,7 @@ section.article-content {
 @media only screen and (min-width: 200px) and (max-width: 767px)  {
   .article-title {
     font-size: calc(var(--main-font-size) / 1.5);
-    line-height: 1;
+    line-height: 2;
   }
 }
 
@@ -717,7 +754,7 @@ section.article-content {
 @media only screen and (min-width: 768px) and (max-width: 1024px)  {
   .article-title {
     font-size: calc(var(--main-font-size) * 1.5);
-    line-height: 1;
+    line-height: 2;
   }
 }
 
@@ -966,7 +1003,7 @@ section.authors {
   width: 20%;
   height: 600px;
   border: 3px solid var(--dark-black);
-  background-color: #F2EE83E1;
+  background-color: #f2da14;
 }
 
 /* Extra small devices (phones, 700px and down) */
