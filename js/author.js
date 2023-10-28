@@ -48,7 +48,7 @@ var load_authors = function() {
         image: "../images/authors/sofia_celi_photo.png",
         twitter: "@claucece",
         website: "https://www.sofiaceli.com/",
-        research: "Post-Quantum Cryptography, Secure Messaging & Deniability"
+        research: "Post-Quantum Cryptography, Secure Messaging & PETs"
       },
       {
         name: "Jesús Chi",
