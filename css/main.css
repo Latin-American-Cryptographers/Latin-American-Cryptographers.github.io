@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 @font-face {
-    font-family: 'Gacor'; /*a name to be used later*/
-    src: url('../assets/fonts/gacor-webfont.woff2'); /*URL to font*/
+  font-family: 'Gacor';
+  /*a name to be used later*/
+  src: url('../assets/fonts/gacor-webfont.woff2');
+  /*URL to font*/
 }
 
 /* Variables that are repeated over the styling code */
@@ -11,7 +13,7 @@
   --off-white: #ffffd1;
   --dark-black: #000000;
   --light-gray: #d3d3d3;
-  --off-yellow: #ff593c;
+  --off-red: #ff593c;
   --off-dark-purple: #23859c;
   --off-light-purple: #8f9df2;
 
@@ -69,14 +71,17 @@ a:focus {
 
 /* Defines the style of all paragraphs in the website */
 p {
-  font-size: var(--main-font-size); /* using em for font sizes as defined in https://gist.github.com/basham/2175a16ab7c60ce8e001 */
+  font-size: var(--main-font-size);
+  /* using em for font sizes as defined in https://gist.github.com/basham/2175a16ab7c60ce8e001 */
 }
 
 /* start of footer section */
 /* styling of the footer tag */
 footer {
-  display: flex; /* using a flex box to stack up elements in a column: the information and the social media icons */
-  justify-content: space-between; /* aligment along the main axis of the elements: items are evenly distributed in the line */
+  display: flex;
+  /* using a flex box to stack up elements in a column: the information and the social media icons */
+  justify-content: space-between;
+  /* aligment along the main axis of the elements: items are evenly distributed in the line */
   align-items: center;
 
   margin: 0;
@@ -84,19 +89,19 @@ footer {
 
   color: var(--dark-black);
   line-height: calc(var(--line-height) / 1.3);
-  background-color: var(--off-yellow);
+  background-color: var(--off-red);
   margin-top: 6rem;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   footer {
     padding: 0 20px;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   footer {
     padding: 0 80px;
   }
@@ -105,6 +110,7 @@ footer {
 .copyright {
   font-size: calc(var(--small-font-size) / 1.3);
 }
+
 /* end footer section */
 /*
 /*
@@ -113,22 +119,24 @@ footer {
 /*
 /* styling of the class corresponding to the banner of the website */
 .banner {
-  display: flex; /* using a flex box to add elements as a row: the logo (a text) and navigation bar (menu) */
+  display: flex;
+  /* using a flex box to add elements as a row: the logo (a text) and navigation bar (menu) */
 
-  position: relative; /* positioned relative to its normal position */
+  position: relative;
+  /* positioned relative to its normal position */
   border-bottom: 1px solid var(--light-gray);
   background-color: black;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .banner {
     margin: 3vh;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .banner {
     margin: 3vh;
   }
@@ -136,7 +144,8 @@ footer {
 
 /* styling of the id corresponding to the logo of the website */
 #header-logo {
-  margin: auto; /* margin is calculated by the browser */
+  margin: auto;
+  /* margin is calculated by the browser */
 
   top: calc(var(--space) * 2);
   left: calc(var(--space) * 2);
@@ -144,18 +153,17 @@ footer {
   margin-left: 3vh;
 }
 
-#header-logo svg {
-}
+#header-logo svg {}
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   #header-logo svg {
     width: 100%;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #header-logo svg {
     width: 100%;
   }
@@ -164,69 +172,88 @@ footer {
 /* styling of the class corresponding to the navigation menu: this toggle is hidden */
 .nav-toggle {
   position: fixed;
-  height: 1px;
+  height: 0px;
   width: 1px;
-  overflow: hidden; /* hiding the element */
+  overflow: hidden;
+  /* hiding the element */
 
-  clip: rect(1px, 1px, 1px, 1px); /* creates a rectangle to clip the absolute element */
-  white-space: nowrap; /* how whitespace is handled: it collapses into a single one */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* creates a rectangle to clip the absolute element */
+  white-space: nowrap;
+  /* how whitespace is handled: it collapses into a single one */
 }
 
 /* styling of the id corresponding to the navigation menu label */
 #nav-toggle-label {
   position: fixed;
-  top: calc(var(--space) * 2); /* position relative to the top */
-  right: calc(var(--space) * 6); /* position relative to the right */
+  top: 0;
+  /* position relative to the top */
+  right: 0;
+  /* position relative to the right */
 
-  cursor: pointer; /* which mouse cursor to display */
-  z-index: 2; /* the order in the stack for this element */
+  cursor: pointer;
+  /* which mouse cursor to display */
+  z-index: 2;
+  /* the order in the stack for this element */
 
   background-color: var(--dark-black);
-  padding: 2rem;
+  padding: 0.5rem;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   #nav-toggle-label {
     position: relative;
-    top: 0; /* position relative to the top */
+    top: 0;
+    /* position relative to the top */
     left: 1rem;
-    right: auto; /* position relative to the right */
+    right: auto;
+    /* position relative to the right */
     margin-left: 1rem;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #nav-toggle-label {
     position: relative;
-    top: 0; /* position relative to the top */
+    top: 0;
+    /* position relative to the top */
     left: 5rem;
-    right: auto; /* position relative to the right */
+    right: auto;
+    /* position relative to the right */
     margin-left: 1rem;
   }
 }
 
-/* styling of the class that draws the sandwich menu */
 .sandwich-menu {
   display: flex;
+  justify-content: center;
+  /* Center the cross horizontally */
+  align-items: center;
+  /* Center the cross vertically */
 
-  --size: calc(1rem + 5vmin); /* local size variable */
+  --size: calc(1rem + 5vmin);
+  /* local size variable */
+
+  /* Set width and height with double the height */
   width: var(--size);
-  height: calc(var(--size) * 3);
+  height: calc(var(--size) * 2);
+
   stroke-width: 8;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .sandwich-menu {
     height: calc(var(--size) * 2);
-    stroke-width: 6; /* the width of the stroke for svg, as seen: https://css-tricks.com/almanac/properties/s/stroke-width/ */
+    stroke-width: 6;
+    /* the width of the stroke for svg, as seen: https://css-tricks.com/almanac/properties/s/stroke-width/ */
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .sandwich-menu {
     stroke-width: 6;
   }
@@ -234,19 +261,24 @@ footer {
 
 /* styling of the class that draws the group of lines of the sandwich menu */
 .line-group {
-  transform: translateX(0); /* a translation using the y axis: this will draw the 'x' for closing */
-  transition: transform var(--menu-duration) var(--menu-ease); /* change the transform value */
+  transform: translateX(0);
+  /* a translation using the y axis: this will draw the 'x' for closing */
+  transition: transform var(--menu-duration) var(--menu-ease);
+  /* change the transform value */
 }
 
 /* styling of the class that draws the each line of the sandwich menu */
 .line-icon {
-  stroke: var(--off-yellow); /* the stroke color of the svg element */
+  stroke: var(--off-red);
+  /* the stroke color of the svg element */
 }
 
 /* styling of the class that draws the each line of the sandwich menu: the close icon */
 .close-icon {
-  stroke: var(--off-yellow); /* the stroke color of the svg element */
-  transform: translateX(-100%); /* use transform to hide the element at first */
+  stroke: var(--off-red);
+  /* the stroke color of the svg element */
+  transform: translateX(-100%);
+  /* use transform to hide the element at first */
 }
 
 /* styling of the nav-menu class that is rendered when the sandwich icon is clicked */
@@ -258,14 +290,17 @@ footer {
   width: 100%;
   height: 100%;
 
-  transform: translateX(-100%); /* usage of the transform to translate over the y axis */
-  z-index: 1; /* the order in the stack for this element */
+  transform: translateX(-100%);
+  /* usage of the transform to translate over the y axis */
+  z-index: 1;
+  /* the order in the stack for this element */
 }
 
 /* styling of the nav-menu class after the content that is rendered when the sandwich icon is clicked */
 /* more information here: https://css-tricks.com/almanac/selectors/a/after-and-before/ */
 .nav-menu:after {
-  content: ''; /* an empty content */
+  content: '';
+  /* an empty content */
 
   position: absolute;
   top: 0;
@@ -274,8 +309,9 @@ footer {
   width: 100%;
   height: 100%;
 
-  background-color: var(--off-yellow);
-  z-index: -1; /* the order in the stack for this element */
+  background-color: var(--off-red);
+  z-index: -1;
+  /* the order in the stack for this element */
 }
 
 /* styling of the nav-menu class ul: starts the menu list */
@@ -288,7 +324,7 @@ footer {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .nav-menu ul {
     font-size: calc(var(--main-font-size) * 1.5);
   }
@@ -296,7 +332,8 @@ footer {
 
 /* styling of the nav-menu class ul li: each element on the menu list */
 .nav-menu ul li {
-  display: flex; /* display as flex-box */
+  display: flex;
+  /* display as flex-box */
   align-items: center;
   position: relative;
 }
@@ -315,15 +352,18 @@ footer {
 .nav-menu a {
   display: inline-block;
   width: 100%;
-  max-width: 18rem; /* allow for a max-width */
+  max-width: 18rem;
+  /* allow for a max-width */
   margin: 0 auto;
 
   color: var(--dark-black);
   line-height: calc(var(--line-height) / 1.5);
 
   /* specify whether the text of an element can be selected */
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
   user-select: none;
 
   /* calculate padding based on a global variable */
@@ -332,13 +372,15 @@ footer {
 
 /* styling of the nav-menu class ul li a:hover: each link on each element on the menu list */
 .nav-menu a:hover {
-  color: var(--opaque-off-white); /* change the color on hover */
+  color: var(--opaque-off-white);
+  /* change the color on hover */
 }
 
 /* For accessibility purposes. See: https://css-tricks.com/focusing-on-focus-styles/ */
 .nav-menu a:focus {
   outline: 3px solid var(--off-dark-purple);
 }
+
 /* end header section */
 /*
 /*
@@ -351,27 +393,34 @@ footer {
 /* style for the content section of the website */
 section.content {
   width: 100vw;
-  height: 98vh; /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
+  height: 98vh;
+  /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
 
-  background-image: url("../images/background_image.png"); /* the website uses a cover background: a map of latin america */
+  background-image: url("../images/background_image.png");
+  /* the website uses a cover background: a map of latin america */
   background-position: left;
-  background-repeat: no-repeat; /* do not repeat the background */
-  background-size: cover; /* cover the entire content with the background image */
+  background-repeat: no-repeat;
+  /* do not repeat the background */
+  background-size: cover;
+  /* cover the entire content with the background image */
 
-  border-bottom: 1px solid var(--light-gray); /* create a thin border between sections */
+  border-bottom: 1px solid var(--light-gray);
+  /* create a thin border between sections */
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   section.content {
-    height: auto; /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
+    height: auto;
+    /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   section.content {
-    height: auto; /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
+    height: auto;
+    /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
   }
 }
 
@@ -409,12 +458,13 @@ section.content {
   padding: 0 calc(var(--space) * 2);
 
   font-size: calc(var(--main-font-size) / 1.2);
-  font-weight: 500; /* apply a bolder font weight */
+  font-weight: 500;
+  /* apply a bolder font weight */
   line-height: calc(var(--line-height) / 1.5);
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .main-content {
     margin: 1rem;
     margin-top: 5rem;
@@ -423,7 +473,7 @@ section.content {
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .main-content {
     margin: 1rem;
     margin-top: 7rem;
@@ -432,19 +482,19 @@ section.content {
 }
 
 #welcome-text {
-  font-size: calc(var(--main-font-size) / 2);
+  font-size: calc(var(--main-font-size) / 2.5);
   font-family: var(--thrid-font);
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   #welcome-text {
     font-size: calc(var(--main-font-size) / 2.5);
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #welcome-text {
     font-size: calc(var(--main-font-size) / 2.5);
   }
@@ -460,35 +510,37 @@ section.content {
 /* https://www.w3.org/TR/selectors-3/#general-sibling-combinators */
 /* matches all of the siblings elemens (label, .sandwich-menu, .line-group) after
 /* the parent (nav-toogle:checked) */
-.nav-toggle:checked ~ label .sandwich-menu .line-group {
-  transform: translateX(100%); /* transform by using the x-axis */
+.nav-toggle:checked~label .sandwich-menu .line-group {
+  transform: translateX(100%);
+  /* transform by using the x-axis */
 }
 
 /* styling of the nav-toggle class: the input that shows the menu when checked */
 /* matches all of the siblings elemens (.nav-menu) after
 /* the parent (nav-toogle:checked) It reveals the menu*/
-.nav-toggle:checked ~ .nav-menu {
+.nav-toggle:checked~.nav-menu {
   transition-duration: 0s;
   transform: translateX(0%);
 }
 
 /* styling of the 'float-section' id that represents the floating elements */
 #float-section {
-  display: flex; /* display the elements as flex-box */
+  display: flex;
+  /* display the elements as flex-box */
   margin: 6rem auto;
   margin-left: 5rem;
   margin-right: 5rem;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   #float-section {
     margin: 0;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #float-section {
     margin: 0;
   }
@@ -497,19 +549,20 @@ section.content {
 /* styling of the 'float-arrow' class that represents the floating arrow between sections */
 .float-arrow {
   display: block;
-  width: 20%; /* reduce the width of the svg */
+  width: 20%;
+  /* reduce the width of the svg */
   margin-right: 20rem;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .float-arrow {
     display: none;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .float-arrow {
     display: none;
   }
@@ -520,13 +573,14 @@ section.content {
   /* the styling of the stroke */
   stroke: black;
   stroke-width: 3;
-  stroke-miterlimit: 10; /* limit on the ratio of the miter length to the stroke-width: https://www.geeksforgeeks.org/css-stroke-miterlimit-property/ */
+  stroke-miterlimit: 10;
+  /* limit on the ratio of the miter length to the stroke-width: https://www.geeksforgeeks.org/css-stroke-miterlimit-property/ */
   fill: none;
 }
 
 /* styling of the 'float-text' id that represents the floating text between the first two sections of the main page */
 #float-text {
-  background-color: var(--off-yellow);
+  background-color: var(--off-red);
   padding: 1.5rem;
   width: 50%;
 
@@ -535,7 +589,7 @@ section.content {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   #float-text {
     width: 100%;
     font-size: calc(var(--main-font-size) / 3);
@@ -543,7 +597,7 @@ section.content {
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #float-text {
     margin-top: 10rem;
     padding: 4rem;
@@ -555,22 +609,25 @@ section.content {
 /* start of most-recet articles section */
 section#articles {
   width: 100vw;
-  height: 120vh; /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
+  height: 120vh;
+  /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
 
   border-bottom: 1px solid var(--light-gray);
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   section#articles {
-    height: auto; /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
+    height: auto;
+    /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   section#articles {
-    height: auto; /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
+    height: auto;
+    /* the height and width are taken relative to the viewport measures. See: https://www.w3schools.com/cssref/css_units.asp */
   }
 }
 
@@ -583,14 +640,14 @@ section#articles {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   #articles-nav {
     margin: 0;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #articles-nav {
     margin: 0;
   }
@@ -599,29 +656,32 @@ section#articles {
 /* styling of the 'main-articles-list' id which lists the most recent articles */
 #main-articles-list {
   display: flex;
-  flex-direction: row; /* display as a row */
+  flex-direction: row;
+  /* display as a row */
   margin-left: 5rem;
   margin-right: 5rem;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   #main-articles-list {
     margin: 0;
 
     display: flex;
-    flex-direction: column; /* display as a column */
+    flex-direction: column;
+    /* display as a column */
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #main-articles-list {
     margin: 0;
     margin-left: 5rem;
 
     display: flex;
-    flex-direction: column; /* display as a column */
+    flex-direction: column;
+    /* display as a column */
   }
 }
 
@@ -635,7 +695,7 @@ section#articles {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-box {
     width: 80%;
     margin-bottom: 1rem;
@@ -643,7 +703,7 @@ section#articles {
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .article-box {
     width: 40%;
     margin-bottom: 2rem;
@@ -652,7 +712,8 @@ section#articles {
 }
 
 .article-link:hover {
-    color: #6438A6; /* change to dark purple */
+  color: #6438A6;
+  /* change to dark purple */
 }
 
 .article-box img {
@@ -662,8 +723,8 @@ section#articles {
 }
 
 .article-box img:hover {
-  opacity = "70%";
-  style.filter = "sepia(100%) saturate(300%) brightness(90%) hue-rotate(180deg)";
+  opacity="70%";
+  style.filter="sepia(100%) saturate(300%) brightness(90%) hue-rotate(180deg)";
 }
 
 .article-title-out {
@@ -674,7 +735,7 @@ section#articles {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-title-out {
     font-size: 1.4rem;
   }
@@ -691,6 +752,7 @@ section#articles {
   font-family: var(--secondary-font);
   text-align: right;
 }
+
 /*
 /*
 /* end of the main page section */
@@ -704,14 +766,14 @@ section.article-content {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   section.article-content {
     margin: 3vh;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   section.article-content {
     margin: 3vh;
   }
@@ -726,7 +788,7 @@ section.article-content {
 
 /* styling of the 'article-information' h2 tag for mobile */
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-information h2 {
     font-size: calc(var(--main-font-size) / 2);
   }
@@ -740,7 +802,7 @@ section.article-content {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-title {
     font-size: calc(var(--main-font-size) / 1.5);
     line-height: 2;
@@ -748,7 +810,7 @@ section.article-content {
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .article-title {
     font-size: calc(var(--main-font-size) * 1.5);
     line-height: 2;
@@ -759,19 +821,20 @@ section.article-content {
 .article-intro {
   margin-top: 5rem;
   font-size: calc(var(--main-font-size) / 2.5);
-  font-style: oblique; /* change the font style */
+  font-style: oblique;
+  /* change the font style */
   line-height: 1;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-intro {
     line-height: 1.5;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .article-intro {
     line-height: 1.5;
   }
@@ -784,17 +847,17 @@ section.article-content {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
-   .article-text {
-     margin-top: 3rem;
-     font-size: calc(var(--small-font-size) / 2.5);
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .article-text {
+    margin-top: 3rem;
+    font-size: calc(var(--small-font-size) / 2.5);
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
-   .article-text {
-     margin-top: 3rem;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .article-text {
+    margin-top: 3rem;
   }
 }
 
@@ -822,9 +885,9 @@ section.article-content {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
-   .article-text img {
-     width: 70%;
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .article-text img {
+    width: 70%;
   }
 }
 
@@ -877,12 +940,13 @@ section.article-content {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-comparison-img {
     flex-direction: column;
     margin-bottom: 1rem;
   }
 }
+
 /*
 /*
 /* end of the article template */
@@ -896,14 +960,14 @@ section.contact {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   section.contact {
     margin: 2vh;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   section.contact {
     margin: 2vh;
     margin-bottom: 8vh;
@@ -916,24 +980,26 @@ section.contact {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .contact-email {
     display: block;
   }
 
   .contact-email i {
-    display: none; /* hide the icon */
+    display: none;
+    /* hide the icon */
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .contact-email {
     display: block;
   }
 
   .contact-email i {
-    display: none; /* hide the icon */
+    display: none;
+    /* hide the icon */
   }
 }
 
@@ -957,14 +1023,14 @@ section.authors {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   section.authors {
     margin: 1rem;
   }
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   section.authors {
     margin: 1rem;
   }
@@ -978,7 +1044,7 @@ section.authors {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .author-list {
     flex-direction: column;
     margin-left: 1rem;
@@ -986,7 +1052,7 @@ section.authors {
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .author-list {
     margin-left: 1rem;
   }
@@ -998,13 +1064,13 @@ section.authors {
   margin: 1rem;
 
   width: 20%;
-  height: 600px;
+  height: 620px;
   border: 3px solid var(--dark-black);
-  background-color: #f2da14;
+  background-color: var(--off-red);
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .author-element {
     width: 80%;
     height: 600px;
@@ -1012,7 +1078,7 @@ section.authors {
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .author-element {
     width: 40%;
     height: 700px;
@@ -1026,18 +1092,18 @@ section.authors {
   object-fit: contain;
 
   /* change the opacity of the image */
-  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  -webkit-filter: grayscale(50%);
+  /* Safari 6.0 - 9.0 */
   filter: grayscale(50%);
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
-  .author-image {
-  }
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .author-image {}
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .author-image {
     width: 70%;
   }
@@ -1052,7 +1118,7 @@ section.authors {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .author-name {
     font-size: calc(var(--small-font-size) * 1.1);
     text-align: right;
@@ -1060,9 +1126,9 @@ section.authors {
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .author-name {
-    font-size: calc(var(--small-font-size) * 1.3);
+    font-size: calc(var(--small-font-size) * 1.2);
     text-align: right;
   }
 }
@@ -1070,23 +1136,23 @@ section.authors {
 /* styling of the 'author-job' class which renders the job for each author */
 .author-job {
   font-family: var(--secondary-font);
-  font-size: calc(var(--small-font-size) / 2);
+  font-size: calc(var(--small-font-size) / 1.3);
   text-align: center;
   line-height: 0.3rem;
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .author-job {
-    font-size: calc(var(--small-font-size) / 3);
+    font-size: calc(var(--small-font-size) / 1.4);
     text-align: right;
   }
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .author-job {
-    font-size: calc(var(--small-font-size) / 3);
+    font-size: calc(var(--small-font-size) / 1.4);
     text-align: right;
   }
 }
@@ -1094,7 +1160,7 @@ section.authors {
 /* styling of the 'author-research' class which renders the research for each author */
 .author-research {
   font-family: var(--secondary-font);
-  font-size: calc(var(--small-font-size) / 2);
+  font-size: calc(var(--small-font-size) / 1.6);
   margin-top: 1rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -1102,28 +1168,53 @@ section.authors {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
-  .author-research {
-     margin-bottom: 1rem;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .author-research {
     margin-bottom: 1rem;
   }
 }
 
-/* styling of the 'author-contact' class which renders the main points of contact for each author */
-.author-contact {
-  text-align: right;
-  line-height: 0.5rem;
+/* Medium devices (landscape tablets, 768px to 1024) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .author-research {
+    margin-bottom: 1rem;
+  }
 }
 
-/* styling of the 'author-contact' p tag which renders the text of the points of contact for each author */
+/* Styling of the 'author-contact' class which renders the main points of contact for each author */
+.author-contact {
+  text-align: center;
+  line-height: 0.5rem;
+  display: flex;
+  /* Use flexbox to align items in a row */
+  justify-content: center;
+  gap: 2.5rem;
+  /* Adds space between the Twitter link and the website link */
+  align-items: center;
+  /* Ensures icons and text are aligned vertically */
+}
+
+/* Styling of the 'author-contact' p tag which renders the text of the points of contact for each author */
 .author-contact p {
+  margin-right: 2.5rem;
+  /* Adds space between paragraphs if any */
   font-size: calc(var(--small-font-size) / 1.7);
+}
+
+/* Styling for the links within the 'author-contact' class */
+.author-contact a {
+  display: flex;
+  /* Aligns the icon and text in a row */
+  align-items: center;
+  /* Keeps icon and text vertically aligned */
+  text-decoration: none;
+  color: inherit;
+  /* Ensures that links inherit the text color */
+}
+
+/* Adds some space between the icon and text in each link */
+.author-contact a i {
+  margin-right: 0.1rem;
 }
 
 /*
@@ -1139,14 +1230,14 @@ section.full-articles {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   section.full-articles {
     margin: 2vh;
   }
 }
 
 /* Medium devices (landscape tablets, 768px up to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   section.full-articles {
     margin: 2vh;
   }
@@ -1160,7 +1251,7 @@ section.full-articles {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   #articles-full-list {
     flex-direction: column;
     margin-left: 1rem;
@@ -1168,7 +1259,7 @@ section.full-articles {
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #articles-full-list {
     margin-left: 1rem;
   }
@@ -1188,7 +1279,7 @@ section.full-articles {
   background-color: var(--opaque-off-light-gray);
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-full-element {
     width: 80%;
     margin: 1rem;
@@ -1196,7 +1287,7 @@ section.full-articles {
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .article-full-element {
     width: 40%;
     margin: 1rem;
@@ -1208,7 +1299,7 @@ section.full-articles {
   font-size: calc(var(--main-font-size) / 2.7);
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-full-element .article-full-title {
     font-size: calc(var(--main-font-size) / 1.3);
   }
@@ -1218,24 +1309,26 @@ section.full-articles {
 .article-full-image {
   width: 90%;
   max-height: 15rem;
-  object-fit: contain; /* image resized to fit the container */
+  object-fit: contain;
+  /* image resized to fit the container */
 
   /* change the image to gray */
-  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  -webkit-filter: grayscale(50%);
+  /* Safari 6.0 - 9.0 */
   filter: grayscale(50%);
   opacity: 70%
 }
 
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-full-image {
     width: 70%;
   }
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .article-full-image {
     width: 80%;
   }
@@ -1250,8 +1343,8 @@ section.full-articles {
 
 /* styling of the 'article-full-information' class a:hover tag which defines the hover of the link */
 .article-full-element a:hover {
- color: var(--off-dark-purple);
- opacity: 70%;
+  color: var(--off-dark-purple);
+  opacity: 70%;
 }
 
 /* For accessibility purposes. See: https://css-tricks.com/focusing-on-focus-styles/ */
@@ -1266,14 +1359,14 @@ section.full-articles {
 }
 
 /* Extra small devices (phones, 700px and down) */
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .article-full-author {
     max-height: 2rem;
   }
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .article-full-author {
     max-height: 3rem;
   }
@@ -1289,6 +1382,7 @@ section.full-articles {
   font-size: var(--small-font-size);
   font-style: oblique;
 }
+
 /* end of the articles page */
 /*
 /* */
@@ -1323,6 +1417,7 @@ section.report img {
 section.report .small-image {
   width: 50%;
 }
+
 /*
 /*
 /* end of the report style */
@@ -1335,7 +1430,8 @@ section.report .small-image {
   font-size: 1rem;
 }
 
-.fixed_headers th, .fixed_headers td {
+.fixed_headers th,
+.fixed_headers td {
   text-align: left;
   padding: 10px;
   border-bottom: 2px solid #d3d3d3;
@@ -1344,21 +1440,22 @@ section.report .small-image {
 
 .fixed_headers thead {
   background-color: #d3d3d3;
-  display:table-header-group;
+  display: table-header-group;
 }
 
-.fixed_headers thead  tr {
-   display: block;
-   position: relative;
- }
+.fixed_headers thead tr {
+  display: block;
+  position: relative;
+}
 
 .fixed_headers tbody {
-   display: block;
-   overflow: auto;
+  display: block;
+  overflow: auto;
 }
 
 .opportunity-text {
-  font-size: calc(var(--main-font-size) / 4); /* using em for font sizes as defined in https://gist.github.com/basham/2175a16ab7c60ce8e001 */
+  font-size: calc(var(--main-font-size) / 3);
+  /* using em for font sizes as defined in https://gist.github.com/basham/2175a16ab7c60ce8e001 */
 }
 
 /* styling of the 'article-text' a tag: the links in the article */
