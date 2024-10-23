@@ -1,99 +1,140 @@
 <!-- the header section includes the navigation bar (which menu is cleaned) and the logo (a text). -->
-<section class="header" title="Main information of the Latin Americans in Cryptography website">
+<section class="header"
+	title="Main information of the Latin Americans in Cryptography website">
 
-  <!-- This class and role is defined as a 'banner' as it represents the general information for the website, as defined here: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role -->
-  <div role="banner" class="banner">
-    <!-- This box corresponds to the logo of the website placed on the header: the logo is text  -->
-    <a href="{{ site.baseurl }}/">
-      <div id="header-logo">
-<svg version="1.1" id="Layer_1" x="0px" y="0px"
-	 viewBox="0 0 258.39 87.41" style="enable-background:new 0 0 258.39 87.41;" xml:space="preserve" width="300" height="200">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-	.st1{fill:#F15B41;}
-	.st2{fill:#26869C;}
-	.st3{fill:#F1DA14;}
-</style>
-<g>
-	<g>
-		<path class="st0" d="M84.64,53.49l3.6,2.48c-1.74,2.63-4.69,4.42-8.05,4.42c-1.96,0-3.79-0.6-5.3-1.65
+	<!-- This class and role is defined as a 'banner' as it represents the general information for the website, as defined here: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role -->
+	<div role="banner"
+		class="banner">
+		<!-- This box corresponds to the logo of the website placed on the header: the logo is text  -->
+		<a href="{{ site.baseurl }}/">
+			<div id="header-logo">
+				<svg version="1.1"
+					id="Layer_1"
+					x="0px"
+					y="0px"
+					viewBox="0 0 258.39 87.41"
+					style="enable-background:new 0 0 258.39 87.41;"
+					xml:space="preserve"
+					width="300"
+					height="200">
+					<style type="text/css">
+						.st0 {
+							fill: #FFFFFF;
+						}
+
+						.st1 {
+							fill: #F15B41;
+						}
+
+						.st2 {
+							fill: #26869C;
+						}
+
+						.st3 {
+							fill: #F1DA14;
+						}
+					</style>
+					<g>
+						<g>
+							<path class="st0"
+								d="M84.64,53.49l3.6,2.48c-1.74,2.63-4.69,4.42-8.05,4.42c-1.96,0-3.79-0.6-5.3-1.65
 			c-2.62-1.76-4.32-4.77-4.32-8.21c0-3.41,1.7-6.44,4.32-8.21c1.5-1.03,3.34-1.63,5.3-1.63c3.36,0,6.3,1.76,8.05,4.42l-3.6,2.45
-			c-0.96-1.47-2.59-2.45-4.45-2.45c-2.92,0-5.3,2.43-5.3,5.42c0,3.01,2.38,5.44,5.3,5.44C82.05,55.97,83.68,54.98,84.64,53.49z"/>
-		<path class="st0" d="M98.95,45.11c-2.92,0-5.3,2.43-5.3,5.42v8.21v1.65h-4.32v-9.86v-9.84h4.32v1.63c1.5-1.03,3.34-1.63,5.3-1.63
-			V45.11z"/>
-		<path class="st0" d="M102.2,33.95c1.2,0,2.16,0.98,2.16,2.21c0,1.2-0.96,2.21-2.16,2.21c-1.18,0-2.16-1-2.16-2.21
-			C100.04,34.93,101.02,33.95,102.2,33.95z M100.04,40.69h4.32v19.69h-4.32V40.69z"/>
-		<path class="st0" d="M110.09,42.34c1.53-1,3.36-1.59,5.32-1.59c5.3,0,9.6,4.32,9.6,9.62c0,5.32-4.3,9.65-9.6,9.65
+			c-0.96-1.47-2.59-2.45-4.45-2.45c-2.92,0-5.3,2.43-5.3,5.42c0,3.01,2.38,5.44,5.3,5.44C82.05,55.97,83.68,54.98,84.64,53.49z" />
+							<path class="st0"
+								d="M98.95,45.11c-2.92,0-5.3,2.43-5.3,5.42v8.21v1.65h-4.32v-9.86v-9.84h4.32v1.63c1.5-1.03,3.34-1.63,5.3-1.63
+			V45.11z" />
+							<path class="st0"
+								d="M102.2,33.95c1.2,0,2.16,0.98,2.16,2.21c0,1.2-0.96,2.21-2.16,2.21c-1.18,0-2.16-1-2.16-2.21
+			C100.04,34.93,101.02,33.95,102.2,33.95z M100.04,40.69h4.32v19.69h-4.32V40.69z" />
+							<path class="st0"
+								d="M110.09,42.34c1.53-1,3.36-1.59,5.32-1.59c5.3,0,9.6,4.32,9.6,9.62c0,5.32-4.3,9.65-9.6,9.65
 			c-1.96,0-3.79-0.59-5.32-1.61v8.66h-4.32V50.37v-9.62h4.32V42.34z M115.41,45.06c-2.94,0-5.32,2.38-5.32,5.3
-			c0,2.95,2.38,5.32,5.32,5.32c2.9,0,5.28-2.38,5.28-5.32C120.69,47.44,118.31,45.06,115.41,45.06z"/>
-		<path class="st0" d="M125.78,50.52V35.38h4.32v5.31h4.34v4.42h-4.34v5.42c0,3.01,2.36,5.44,5.3,5.44v4.42
-			c-1.96,0-3.79-0.6-5.3-1.65C127.5,56.97,125.78,53.96,125.78,50.52z"/>
-		<path class="st0" d="M154.85,50.52c0,3.43-1.7,6.44-4.32,8.21c-1.5,1.05-3.34,1.65-5.28,1.65c-5.34,0-9.64-4.42-9.64-9.86
+			c0,2.95,2.38,5.32,5.32,5.32c2.9,0,5.28-2.38,5.28-5.32C120.69,47.44,118.31,45.06,115.41,45.06z" />
+							<path class="st0"
+								d="M125.78,50.52V35.38h4.32v5.31h4.34v4.42h-4.34v5.42c0,3.01,2.36,5.44,5.3,5.44v4.42
+			c-1.96,0-3.79-0.6-5.3-1.65C127.5,56.97,125.78,53.96,125.78,50.52z" />
+							<path class="st0"
+								d="M154.85,50.52c0,3.43-1.7,6.44-4.32,8.21c-1.5,1.05-3.34,1.65-5.28,1.65c-5.34,0-9.64-4.42-9.64-9.86
 			c0-5.42,4.3-9.84,9.64-9.84c1.94,0,3.77,0.6,5.28,1.63C153.15,44.08,154.85,47.11,154.85,50.52z M145.25,55.97
-			c2.9,0,5.28-2.43,5.28-5.44c0-2.99-2.38-5.42-5.28-5.42c-2.94,0-5.32,2.43-5.32,5.42C139.93,53.53,142.31,55.97,145.25,55.97z"/>
-		<path class="st0" d="M155.94,33.46h4.32v26.92h-4.32V33.46z"/>
-		<path class="st0" d="M161.35,50.52c0-3.41,1.72-6.44,4.32-8.21c1.53-1.03,3.36-1.63,5.32-1.63c1.96,0,3.77,0.6,5.3,1.63v-1.63
+			c2.9,0,5.28-2.43,5.28-5.44c0-2.99-2.38-5.42-5.28-5.42c-2.94,0-5.32,2.43-5.32,5.42C139.93,53.53,142.31,55.97,145.25,55.97z" />
+							<path class="st0"
+								d="M155.94,33.46h4.32v26.92h-4.32V33.46z" />
+							<path class="st0"
+								d="M161.35,50.52c0-3.41,1.72-6.44,4.32-8.21c1.53-1.03,3.36-1.63,5.32-1.63c1.96,0,3.77,0.6,5.3,1.63v-1.63
 			h4.32v9.84v9.86h-4.32v-1.65c-1.53,1.05-3.34,1.65-5.3,1.65c-1.96,0-3.79-0.6-5.32-1.65C163.07,56.97,161.35,53.96,161.35,50.52z
 			 M176.29,50.52c0-2.99-2.38-5.42-5.3-5.42c-2.94,0-5.32,2.43-5.32,5.42c0,3.01,2.38,5.44,5.32,5.44
-			C173.91,55.97,176.29,53.53,176.29,50.52z"/>
-		<path class="st0" d="M181.7,50.52V35.38h4.32v5.31h4.34v4.42h-4.34v5.42c0,3.01,2.36,5.44,5.3,5.44v4.42
-			c-1.96,0-3.79-0.6-5.3-1.65C183.42,56.97,181.7,53.96,181.7,50.52z"/>
-		<path class="st0" d="M194.57,34.11c1.2,0,2.16,0.98,2.16,2.21c0,1.2-0.96,2.21-2.16,2.21c-1.18,0-2.16-1-2.16-2.21
-			C192.41,35.09,193.39,34.11,194.57,34.11z M192.41,40.69h4.32v19.69h-4.32V40.69z"/>
-		<path class="st0" d="M211.56,49.61c0-2.48-2.01-4.5-4.43-4.5c-2.4,0-4.4,2.03-4.4,4.5v6.36v4.42h-4.32V49.61v-8.92h4.32v1.25
-			c1.31-0.8,2.79-1.25,4.4-1.25c1.61,0,3.12,0.45,4.43,1.25c2.57,1.54,4.32,4.42,4.32,7.67v10.77h-4.32v-4.42V49.61z"/>
-		<path class="st0" d="M235.61,50.52c0,3.43-1.7,6.44-4.32,8.21c-1.5,1.05-3.34,1.65-5.28,1.65c-5.34,0-9.64-4.42-9.64-9.86
+			C173.91,55.97,176.29,53.53,176.29,50.52z" />
+							<path class="st0"
+								d="M181.7,50.52V35.38h4.32v5.31h4.34v4.42h-4.34v5.42c0,3.01,2.36,5.44,5.3,5.44v4.42
+			c-1.96,0-3.79-0.6-5.3-1.65C183.42,56.97,181.7,53.96,181.7,50.52z" />
+							<path class="st0"
+								d="M194.57,34.11c1.2,0,2.16,0.98,2.16,2.21c0,1.2-0.96,2.21-2.16,2.21c-1.18,0-2.16-1-2.16-2.21
+			C192.41,35.09,193.39,34.11,194.57,34.11z M192.41,40.69h4.32v19.69h-4.32V40.69z" />
+							<path class="st0"
+								d="M211.56,49.61c0-2.48-2.01-4.5-4.43-4.5c-2.4,0-4.4,2.03-4.4,4.5v6.36v4.42h-4.32V49.61v-8.92h4.32v1.25
+			c1.31-0.8,2.79-1.25,4.4-1.25c1.61,0,3.12,0.45,4.43,1.25c2.57,1.54,4.32,4.42,4.32,7.67v10.77h-4.32v-4.42V49.61z" />
+							<path class="st0"
+								d="M235.61,50.52c0,3.43-1.7,6.44-4.32,8.21c-1.5,1.05-3.34,1.65-5.28,1.65c-5.34,0-9.64-4.42-9.64-9.86
 			c0-5.42,4.3-9.84,9.64-9.84c1.94,0,3.77,0.6,5.28,1.63C233.91,44.08,235.61,47.11,235.61,50.52z M226.02,55.97
-			c2.9,0,5.28-2.43,5.28-5.44c0-2.99-2.38-5.42-5.28-5.42c-2.94,0-5.32,2.43-5.32,5.42C220.7,53.53,223.07,55.97,226.02,55.97z"/>
-	</g>
-	<g>
-		<g>
-			<path class="st1" d="M40.18,44.65v23.06c0,1.2,1.63,1.66,2.32,0.66L57.34,46.5c0.54-0.8-0.06-1.86-1.06-1.86L40.18,44.65z"/>
-			<path class="st1" d="M31.63,35.02v9.1c0,0.3,0.25,0.54,0.56,0.54h8.01l-7.56-9.95C32.32,34.29,31.63,34.5,31.63,35.02z"/>
-		</g>
-		<path class="st2" d="M60.36,65.34c-3.5,4.12-8.02,6.74-13.43,7.78c-14.5,2.78-26.78-6.43-28.94-18.55
+			c2.9,0,5.28-2.43,5.28-5.44c0-2.99-2.38-5.42-5.28-5.42c-2.94,0-5.32,2.43-5.32,5.42C220.7,53.53,223.07,55.97,226.02,55.97z" />
+						</g>
+						<g>
+							<g>
+								<path class="st1"
+									d="M40.18,44.65v23.06c0,1.2,1.63,1.66,2.32,0.66L57.34,46.5c0.54-0.8-0.06-1.86-1.06-1.86L40.18,44.65z" />
+								<path class="st1"
+									d="M31.63,35.02v9.1c0,0.3,0.25,0.54,0.56,0.54h8.01l-7.56-9.95C32.32,34.29,31.63,34.5,31.63,35.02z" />
+							</g>
+							<path class="st2"
+								d="M60.36,65.34c-3.5,4.12-8.02,6.74-13.43,7.78c-14.5,2.78-26.78-6.43-28.94-18.55
 			c-2.35-13.16,6.43-24.95,20.3-26.99c7.61-1.12,14.53,0.81,20.23,5.99c0.1,0.09,0.12,0.25,0.33,0.71
 			c-1.11-0.71-1.94-1.27-2.79-1.79c-12.98-7.95-30.9-1.28-33.91,13.9c-2.87,14.43,9.22,26.75,24.58,25.25
-			c4.18-0.41,8.01-1.91,11.28-4.52c0.77-0.61,1.57-1.18,2.36-1.77L60.36,65.34z"/>
-		<path class="st3" d="M38.79,32.11c7.31-1.74,13.78-0.02,18.99,5.02c5.9,5.7,7.54,12.65,4.66,20.24c-2,5.27-5.81,9.07-11.49,10.95
-			c4.78-2.85,7.99-6.82,9.46-12.01c1.04-3.69,0.95-7.37-0.36-11.02C57.48,38.15,50.3,31.59,38.79,32.11z"/>
-	</g>
-</g>
-</svg>
-      </div>
-    </a>
+			c4.18-0.41,8.01-1.91,11.28-4.52c0.77-0.61,1.57-1.18,2.36-1.77L60.36,65.34z" />
+							<path class="st3"
+								d="M38.79,32.11c7.31-1.74,13.78-0.02,18.99,5.02c5.9,5.7,7.54,12.65,4.66,20.24c-2,5.27-5.81,9.07-11.49,10.95
+			c4.78-2.85,7.99-6.82,9.46-12.01c1.04-3.69,0.95-7.37-0.36-11.02C57.48,38.15,50.3,31.59,38.79,32.11z" />
+						</g>
+					</g>
+				</svg>
+			</div>
+		</a>
 
-    <!-- This section corresponds to the sandwich menu of the website which will use the 'checkbox' to toggle and show the content.-->
-    <!-- It will also change the icon from sandwich to close.-->
-    <input id="nav-toggle" class="nav-toggle" type="checkbox" />
-    <label id="nav-toggle-label" for="nav-toggle">
-      <svg class="sandwich-menu" viewBox="0 0 60 30">
-        <!-- The sandwich menu icon  -->
-        <g class="line-group">
-          <g class="line-icon">
-            <path d="M 6 0 L 54 0" />
-            <path d="M 6 15 L 50 15" />
-            <path d="M 6 30 L 54 30" />
-          </g>
-          <!-- The close menu icon  -->
-          <g class="close-icon">
-            <path d="M 15 0 L 45 30" />
-            <path d="M 15 30 L 45 0" />
-          </g>
-        </g>
-      </svg>
-    </label>
+		<!-- This section corresponds to the sandwich menu of the website which will use the 'checkbox' to toggle and show the content.-->
+		<!-- It will also change the icon from sandwich to close.-->
+		<input id="nav-toggle"
+			class="nav-toggle"
+			type="checkbox" />
+		<label id="nav-toggle-label"
+			for="nav-toggle">
+			<svg class="sandwich-menu"
+				viewBox="0 0 60 30">
+				<!-- The sandwich menu icon  -->
+				<g class="line-group">
+					<g class="line-icon">
+						<path d="M 6 0 L 54 0" />
+						<path d="M 6 15 L 50 15" />
+						<path d="M 6 30 L 54 30" />
+					</g>
+					<!-- The close menu icon  -->
+					<g class="close-icon">
+						<path d="M 15 0 L 45 30" />
+						<path d="M 15 30 L 45 0" />
+					</g>
+				</g>
+			</svg>
+		</label>
 
-    <!-- This section corresponds to the main navigation menu of the website which will be shown when the 'checkbox' is toggled.-->
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="{{ site.baseurl }}/index">Home</a></li>
-        <li><a href="{{ site.baseurl }}/authors">Authors</a></li>
-        <li><a href="{{ site.baseurl }}/articles">Articles</a></li>
-        <li><a href="{{ site.baseurl }}/opportunities">Opportunties</a></li>
-        <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+		<!-- This section corresponds to the main navigation menu of the website which will be shown when the 'checkbox' is toggled.-->
+		<nav class="nav-menu">
+			<ul>
+				<li><a href="{{ site.baseurl }}/index">Home</a></li>
+				<li><a href="{{ site.baseurl }}/authors">About Us</a></li>
+				<li><a href="{{ site.baseurl }}/articles">Articles</a></li>
+				<li><a href="{{ site.baseurl }}/opportunities">Opportunties</a>
+				</li>
+				<li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
 
 </section>

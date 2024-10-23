@@ -1064,7 +1064,7 @@ section.authors {
   margin: 1rem;
 
   width: 20%;
-  height: 620px;
+  height: 520px;
   border: 3px solid var(--dark-black);
   background-color: var(--off-red);
 }
@@ -1087,15 +1087,17 @@ section.authors {
 
 /* styling of the 'author-image' class which renders the image for each author */
 .author-image {
-  width: 90%;
-  height: 50%;
-  object-fit: contain;
-
-  /* change the opacity of the image */
+  width: 99.5%;
+  height: 40%;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+  /* This maintains consistent proportions */
+  margin-bottom: 0.2rem;
+  /* Reduce the margin to decrease space */
   -webkit-filter: grayscale(50%);
-  /* Safari 6.0 - 9.0 */
   filter: grayscale(50%);
 }
+
 
 /* Extra small devices (phones, 700px and down) */
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -1115,6 +1117,9 @@ section.authors {
   font-size: calc(var(--small-font-size) / 1.1);
   text-align: center;
   height: 50px;
+  margin-top: 0;
+  /* Ensure there is no extra top margin */
+}
 }
 
 /* Extra small devices (phones, 700px and down) */
@@ -1144,7 +1149,7 @@ section.authors {
 /* Extra small devices (phones, 700px and down) */
 @media only screen and (min-width: 200px) and (max-width: 767px) {
   .author-job {
-    font-size: calc(var(--small-font-size) / 1.4);
+    font-size: calc(var(--small-font-size) / 1.3);
     text-align: right;
   }
 }
@@ -1152,7 +1157,7 @@ section.authors {
 /* Medium devices (landscape tablets, 768px to 1024) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .author-job {
-    font-size: calc(var(--small-font-size) / 1.4);
+    font-size: calc(var(--small-font-size) / 1.3);
     text-align: right;
   }
 }
@@ -1160,7 +1165,7 @@ section.authors {
 /* styling of the 'author-research' class which renders the research for each author */
 .author-research {
   font-family: var(--secondary-font);
-  font-size: calc(var(--small-font-size) / 1.6);
+  font-size: calc(var(--small-font-size) / 1.3);
   margin-top: 1rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -1170,14 +1175,14 @@ section.authors {
 /* Extra small devices (phones, 700px and down) */
 @media only screen and (min-width: 200px) and (max-width: 767px) {
   .author-research {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 /* Medium devices (landscape tablets, 768px to 1024) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .author-research {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1188,33 +1193,39 @@ section.authors {
   display: flex;
   /* Use flexbox to align items in a row */
   justify-content: center;
-  gap: 2.5rem;
+  /* Center all elements horizontally */
+  gap: 1.5rem;
   /* Adds space between the Twitter link and the website link */
   align-items: center;
   /* Ensures icons and text are aligned vertically */
-}
-
-/* Styling of the 'author-contact' p tag which renders the text of the points of contact for each author */
-.author-contact p {
-  margin-right: 2.5rem;
-  /* Adds space between paragraphs if any */
-  font-size: calc(var(--small-font-size) / 1.7);
+  margin-top: 1rem;
+  /* Add some margin-top to provide separation from other content */
 }
 
 /* Styling for the links within the 'author-contact' class */
 .author-contact a {
   display: flex;
-  /* Aligns the icon and text in a row */
+  /* Align the icon and text in a row */
   align-items: center;
-  /* Keeps icon and text vertically aligned */
+  /* Keep icon and text vertically aligned */
   text-decoration: none;
+  /* Remove underline from links */
   color: inherit;
-  /* Ensures that links inherit the text color */
+  margin-top: 1rem;
+  /* Ensure that links inherit the text color */
 }
 
 /* Adds some space between the icon and text in each link */
 .author-contact a i {
-  margin-right: 0.1rem;
+  margin-right: 0.5rem;
+  /* Increased space between the icon and the link text */
+}
+
+/* Styling for the 'author-contact' p tag which renders additional text */
+.author-contact p {
+  margin-right: 2.5rem;
+  /* Adds space between paragraphs if any */
+  font-size: calc(var(--small-font-size) / 1.7);
 }
 
 /*

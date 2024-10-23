@@ -7,7 +7,7 @@ const context = {
     image: "../images/authors/abdelraham_aly_photo.png",
     twitter: "@abdito_8",
     website: "https://scholar.google.es/citations?user=FDfDueMAAAAJ&hl=en",
-    research: "Multiparty Computation, Algorithm Design & Applied Cryptography"
+    research: "MPC, Algorithm Design & Applied Cryptography"
   },
   {
     name: "Diego Aranha",
@@ -17,7 +17,7 @@ const context = {
     image: "../images/authors/diego_aranha_photo.png",
     twitter: "@dfaranha",
     website: "https://sites.google.com/site/dfaranha/",
-    research: "Elliptic-Curve Cryptography & Efficient And Secure Cryptography in Software"
+    research: "ECC & Efficient And Secure Cryptography in Software"
   },
   {
     name: "Gustavo Banegas",
@@ -27,7 +27,7 @@ const context = {
     image: "../images/authors/gustavo_banegas_photo.png",
     twitter: "@gustavosbanegas",
     website: "https://www.cryptme.in/",
-    research: "Quantum Cryptanalysis, Isogeny-based Cryptography & Post-quantum Cryptography"
+    research: "Quantum Cryptanalysis, Isogeny-based Cryptography & PQC"
   },
   {
     name: "Fabio Campos",
@@ -37,7 +37,7 @@ const context = {
     image: "../images/authors/fabio_campos_photo.png",
     twitter: "@primaboinca",
     website: "https://www.sopmac.de/",
-    research: "Post-quantum Cryptography"
+    research: "PQC"
   },
   {
     name: "Sofía Celi",
@@ -47,7 +47,7 @@ const context = {
     image: "../images/authors/sofia_celi_photo.png",
     twitter: "@claucece",
     website: "https://www.sofiaceli.com/",
-    research: "Post-Quantum Cryptography, Secure Messaging & PETs"
+    research: "PQC, Secure Messaging & PETs"
   },
   {
     name: "Jesús Chi",
@@ -67,7 +67,7 @@ const context = {
     image: "../images/authors/daniel_escudero_photo.png",
     twitter: "@deescuderoo",
     website: "https://deescuderoo.github.io/",
-    research: "Multivariate Cryptography, Multiparty Computation & Private Machine Learning"
+    research: "Multivariate Cryptography, MPC & Private ML"
   },
   {
     name: "Armando Faz",
@@ -77,17 +77,7 @@ const context = {
     image: "../images/authors/armando_faz_photo.png",
     twitter: "@armfazh",
     website: "https://scholar.google.com/citations?user=XGD6X-EAAAAJ&hl=en",
-    research: "Cryptographic Engineering, Elliptic Curve Cryptography & High-Performance Computing"
-  },
-  {
-    name: "Patrick Longa",
-    job: "Cryptography Researcher",
-    location: "Redmond, USA",
-    region: "North America",
-    image: "../images/authors/patrick_longa_photo.png",
-    twitter: "@PatrickLonga",
-    website: "https://www.patricklonga.com/",
-    research: "Post-quantum Cryptography, Algorithm Design & High-Performance Computing"
+    research: "Cryptographic Engineering, ECC & HPC"
   },
   {
     name: "Octavio Perez Kempner",
@@ -97,17 +87,7 @@ const context = {
     image: "../images/authors/octavio_perez_photo.png",
     twitter: "@octaviopk",
     website: "https://octavio.pk",
-    research: "Provable security, Public-key Crpytography & Zero-knowledge Proofs"
-  },
-  {
-    name: "Francisco Rodríguez",
-    job: "Professor",
-    location: "Abu Dhabi, UAE",
-    region: "Asia",
-    image: "../images/authors/francisco_rodriguez_photo.png",
-    twitter: "@FRHENR",
-    website: "https://delta.cs.cinvestav.mx/~francisco/",
-    research: "Public-key Crpytography & Computer Arithmetic"
+    research: "Provable security, PKC & Zero-knowledge Proofs"
   },
   {
     name: "Fernando Virdia",
@@ -117,7 +97,7 @@ const context = {
     image: "../images/authors/fernando_virdia_photo.png",
     twitter: "",
     website: "https://fundamental.domains/",
-    research: "Post-quantum Cryptography & Cryptanalysis"
+    research: "PQC & Cryptanalysis"
   },
   {
     name: "Arantxa Zapico",
@@ -127,7 +107,7 @@ const context = {
     image: "../images/authors/arantxa_zapico_photo.png",
     twitter: "@arantxazapico",
     website: "https://sites.google.com/view/arantxazapico",
-    research: "Public-key Crpytography & Zero-knowledge Proofs"
+    research: "PKC & Zero-knowledge Proofs"
   },
   ]
 };
