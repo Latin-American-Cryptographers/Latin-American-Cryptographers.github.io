@@ -28,8 +28,8 @@ layout: default
                 <p class="author-name">{{name}}</p>
                 <p class="author-job">{{job}}</p>
                 <p class="author-job">{{location}}</p>
-                <p class="author-job">{{region}}</p>
-                <p class="author-research">Research interests: {{research}}</p>
+                <!-- <p class="author-job">{{region}}</p> -->
+                <!-- <p class="author-research">Research interests: {{research}}</p> -->
                 <div class="author-contact">
                     <!-- renders the twitter account and an icon for it by using font-awesome. -->
                     <a href="https://x.com/{{twitter}}"><i
@@ -49,29 +49,59 @@ layout: default
     </div>
 
     <div class="main-content">
-        <p class="intro-text">Members</p>
-        <!-- dynamically generate (by using js) the list of authors: this uses handlebars. This script defines the template to be used. -->
-        <script id="filtered-author-template"
+        <p class="intro-text">Members Database</p>
+
+        <!-- Add Search Filters Here -->
+        <div class="search-filters">
+            <label for="region-select">Filter by Region:</label>
+            <select id="region-select">
+                <option value="">All Regions</option>
+                <option value="North America">North America</option>
+                <option value="Central America">Central America</option>
+                <option value="South America">South America</option>
+                <option value="Europe">Europe</option>
+                <option value="Africa">Africa</option>
+                <option value="Asia">Asia</option>
+                <!-- Add more regions as needed -->
+            </select>
+
+            <label for="research-select">Filter by Research Interests:</label>
+            <select id="research-select">
+                <option value="">All Research Interests</option>
+                <option value="PQC">Post-quantum
+                    Cryptography</option>
+                <option value="Algorithm Design">Algorithm Design</option>
+                <option value="HPC">High-Performance
+                    Computing</option>
+                <option value="PKC">Public-Key Cryptography</option>
+                <option value="Zero-Knowledge Proofs">Zero-Knowledge Proofs
+                </option>
+                <option value="MPC">Multiparty Computation</option>
+                <!-- Add more research interests as needed -->
+            </select>
+
+            <button id="filter-button">Filter Members</button>
+        </div>
+
+        <!-- Existing Handlebars Template for Authors -->
+        <script id="filtered-member-template"
             type="text/x-handlebars-template">
-        <!-- the list of authors -->
-        <div class="filtered-author-list">
+            <!-- the list of authors -->
+        <div class="member-list">
             <!-- a built-in helper of handlebars: #each (for each), as defined in: https://handlebarsjs.com/guide/builtin-helpers.html . -->
             {% raw %}
             {{#each authors}}
-            <!-- the container for each author. -->
-            <div class="author-element">
+            <!-- the container for each member. -->
+            <div class="member-element">
                 <img src="{{image}}"
                     alt="{{name}}'s photo"
-                    class="author-image" />
-                <p class="author-name">{{name}}</p>
-                <p class="author-job">{{job}}</p>
-                <p class="author-job">{{location}}</p>
-                <p class="author-job">{{region}}</p>
-                <p class="author-research">Research interests: {{research}}</p>
-                <div class="author-contact">
-                    <!-- renders the twitter account and an icon for it by using font-awesome. -->
-                    <a href="https://x.com/{{twitter}}"><i
-                            class="fab fa-twitter"></i>{{twitter}}</a>
+                    class="member-image" />
+                <p class="member-name">{{name}}</p>
+                <p class="member-job">{{job}}</p>
+                <p class="member-job">{{location}}</p>
+                <!-- <p class="member-job">{{region}}</p> -->
+                <!-- <p class="member-research">Research interests: {{research}}</p> -->
+                <div class="member-contact">
                     <!-- renders the website and an icon for it by using font-awesome. -->
                     <a href="{{website}}"
                         alt="{{name}}'s website"><i class="fa fa-globe"></i></a>
@@ -81,8 +111,8 @@ layout: default
             {% endraw %}
         </div>
         </script>
-    </div>
-    <!-- the container where the rendered output from the 'author-template' will be dumped. -->
-    <div class="filtered-author-rendered-output">
+
+        <!-- Container where the rendered output will be inserted -->
+        <div class="filtered-member-rendered-output"></div>
     </div>
 </section>
