@@ -90,6 +90,15 @@ const context = {
     research: "Provable security, PKC & Zero-knowledge Proofs"
   },
   {
+    name: "Ricardo Rodríguez",
+    job: "PhD Student",
+    location: "Bochum, Germany",
+    region: "Europe",
+    image: "./images/authors/ricardo_rodriguez_photo.png",
+    twitter: "",
+    website: "https://ricardorodriguezreveco.com/"
+  },
+  {
     name: "Fernando Virdia",
     job: "Post-Doc",
     location: "Lisbon, Portugal",
