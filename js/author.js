@@ -80,6 +80,15 @@ const context = {
     research: "Cryptographic Engineering, ECC & HPC"
   },
   {
+    name: "Alejandro Hevia",
+    job: "Associate Professor",
+    location: "Santiago, Chile",
+    region: "South America",
+    image: "../images/authors/alejandro_hevia_photo.png",
+    twitter: "@ahevia",
+    website: "https://users.dcc.uchile.cl/~ahevia/"
+  },
+  {
     name: "Octavio Perez Kempner",
     job: "Post-Doc",
     location: "Tokyo, Japan",
@@ -94,7 +103,7 @@ const context = {
     job: "PhD Student",
     location: "Bochum, Germany",
     region: "Europe",
-    image: "./images/authors/ricardo_rodriguez_photo.png",
+    image: "../images/authors/ricardo_rodriguez_photo.png",
     twitter: "",
     website: "https://ricardorodriguezreveco.com/"
   },
