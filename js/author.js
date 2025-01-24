@@ -71,13 +71,13 @@ const context = {
   },
   {
     name: "Armando Faz",
-    job: "Cryptography Engineer",
-    location: "California, USA",
+    job: "Cryptography Researcher",
+    location: "San Francisco, USA",
     region: "North America",
     image: "../images/authors/armando_faz_photo.png",
     twitter: "@armfazh",
-    website: "https://scholar.google.com/citations?user=XGD6X-EAAAAJ&hl=en",
-    research: "Cryptographic Engineering, ECC & HPC"
+    website: "https://armfazh.github.io/",
+    research: "Elliptic curves, PKC, Secure Software"
   },
   {
     name: "Alejandro Hevia",
