@@ -71,13 +71,22 @@ const context = {
   },
   {
     name: "Armando Faz",
-    job: "Cryptography Engineer",
-    location: "California, USA",
+    job: "Cryptography Researcher",
+    location: "San Francisco, USA",
     region: "North America",
     image: "../images/authors/armando_faz_photo.png",
     twitter: "@armfazh",
-    website: "https://scholar.google.com/citations?user=XGD6X-EAAAAJ&hl=en",
-    research: "Cryptographic Engineering, ECC & HPC"
+    website: "https://armfazh.github.io/",
+    research: "Elliptic curves, PKC, Secure Software"
+  },
+  {
+    name: "Alejandro Hevia",
+    job: "Associate Professor",
+    location: "Santiago, Chile",
+    region: "South America",
+    image: "../images/authors/alejandro_hevia_photo.png",
+    twitter: "@ahevia",
+    website: "https://users.dcc.uchile.cl/~ahevia/"
   },
   {
     name: "Octavio Perez Kempner",
@@ -88,6 +97,15 @@ const context = {
     twitter: "@octaviopk",
     website: "https://octavio.pk",
     research: "Provable security, PKC & Zero-knowledge Proofs"
+  },
+  {
+    name: "Ricardo Rodríguez",
+    job: "PhD Student",
+    location: "Bochum, Germany",
+    region: "Europe",
+    image: "../images/authors/ricardo_rodriguez_photo.png",
+    twitter: "",
+    website: "https://ricardorodriguezreveco.com/"
   },
   {
     name: "Fernando Virdia",
